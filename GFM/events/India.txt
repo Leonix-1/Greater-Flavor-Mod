@@ -953,6 +953,10 @@ country_event = {
                 primary_culture = boer
                 overlord = { NOT = { owns = 2087 } }
             }
+			AND = { 
+				is_culture_group = maphilindo_group
+				overlord = { primary_culture = dutch }
+			}
         }
         OR = {
             AND = {
@@ -987,6 +991,13 @@ country_event = {
 					THIS = { tag = BER }
 				}
 			}
+			NOT = {
+				AND = { 
+					primary_culture = british
+					owns = 1384
+					NOT = { owns = 1413 }
+				}
+			}
         }
         OR = {
             is_culture_group = south_asian
@@ -1000,6 +1011,7 @@ country_event = {
             tag = SAF
             tag = HND
             tag = AFG
+			tag = INO
         }
     }
 

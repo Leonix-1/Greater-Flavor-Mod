@@ -4386,7 +4386,6 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        owns = 397
         tag = NET
         owns = 398
 		OR = {
@@ -5133,4 +5132,156 @@ country_event = {
     option = {
         name = "However, the Dutch have refused to let us go and plan an invasion!"
     }
+}
+	
+country_event = {
+	id = 211603
+	title = "The Dutch claim the Rhine!"
+	desc = "EVT211603DESC"
+	picture = "german_rhine"
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = { 
+		name = "Reinforce the border! The Dutch have gone mad from the sound of their wooden shoes."
+		ai_chance = { factor = 4 }
+	}
+	
+	option = {
+		name = "EVT211603OPTA"
+		badboy = -1
+		FROM = { country_event = 211604 }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 211604
+	title = "The Kleve Compromise?"
+	desc = "EVT211604DESC"
+	picture = "kleve"
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = { 
+		name = "EVT211604OPTA"
+		badboy = -8
+		FROM = { country_event = 211605 }
+		PRU_575 = { remove_core = THIS }
+		PRU_578 = { remove_core = THIS }
+		574 = { remove_core = THIS }
+		573 = { remove_core = THIS }
+		565 = { remove_core = THIS }
+		583 = { remove_core = THIS }
+		581 = { remove_core = THIS }
+		577 = {
+			add_core = THIS
+			remove_core = RHI
+			remove_core = GER
+		}
+		any_greater_power = { 
+				relation = { who = THIS value = 50 }
+			}
+		prestige = 5
+		ai_chance = { factor = 4 }
+	}
+	
+	option = {
+		name = "This is an insult! Aren't they taking us seriously?"
+		FROM = { country_event = 211606 }
+		prestige = 10
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 211605
+	title = "The Kleve Compromise"
+	desc = "EVT211604DESC"
+	picture = "kleve"
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+
+	option = { 
+		name = "It seems the Dutch haven't gone mad after all"
+		prestige = -5
+		577 = { remove_core = THIS }
+		any_pop = { limit = { has_pop_culture = north_german } militancy = 1 }
+	}
+}
+	
+country_event = {
+	id = 211606
+	title = "The Dutch are defiant!"
+	desc = "The Dutch have declined our generous compromise. Our troops are already mobilizing to defend the border from the Dutch threat."
+	picture = "conscription_marching"
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {
+		name = "So the Dutch have gone mad after all..."
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 211607
+	title = "The Heligoland Purchase"
+	desc = "$FROMCOUNTRY$ wants to buy Heligoland from us. While it holds a strong position in the German Blight, the truth is that Heligoland has little use to us as a naval base, having evolved into a vacation spot and safe haven for German liberals."
+	picture = "SeaPower"
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {
+		name = "They are paying that much for a tourist destination? Let them have it."
+		money = 100000
+		FROM = { country_event = 211608 }
+		relation = { who = FROM value = 50 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "I have quite fond memories of vacationing there, you know?"
+		FROM = { country_event = 211609 }
+		relation = { who = FROM value = -50 }
+		ai_chance = { factor = 0 }
+	}
+}
+	
+country_event = {
+	id = 211608
+	title = "Heligoland is ours!"
+	desc = "$FROMCOUNTRY$ have agreed to our proposal to buy Heligoland. The island is officially ours!"
+	picture = "SeaPower"
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {
+		name = "I heard the island is rather nice this time of the year..."
+		533 = {
+			add_core = THIS
+			secede_province = THIS
+		}
+		money = -100000
+	}
+}
+	
+	
+country_event = {
+	id = 211609
+	title = "They refused!"
+	desc = "It seems that our bid to buy Heligoland was refused."
+	picture = "SeaPower"
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {
+		name = "I bet they knew I was packing my stuff already..."
+	}
 }
