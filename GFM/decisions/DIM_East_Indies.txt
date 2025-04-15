@@ -3,10 +3,7 @@ political_decisions = {
         picture = annex_stg
         potential = {
 			neighbour = STG
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+			owns = 10
 			is_vassal = no
 			STG = { ai = yes is_vassal = no }
 			NOT = { has_country_flag = sintang_ded }
@@ -40,10 +37,7 @@ political_decisions = {
 	end_the_javanese_sultanates = {
         picture = java_map
         potential = {
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+            owns = 1413
             JAV = {
                 vassal_of = THIS
                 exists = yes
@@ -72,10 +66,6 @@ political_decisions = {
     the_short_declaration = {
         picture = DIM_korte_verklaring
         potential = {
-            OR = {
-				tag = NET
-				tag = BNF
-			}
             OR = {
                 MAL = { vassal_of = THIS exists = yes civilized = no }
                 SAK = { vassal_of = THIS exists = yes civilized = no }
@@ -144,10 +134,6 @@ political_decisions = {
 			owns = 1909
             neighbour = ATJ
             colonial_nation = yes
-            OR = {
-				tag = NET
-				tag = BNF
-			}
             ATJ = {
                 exists = yes
                 part_of_sphere = yes
@@ -179,10 +165,7 @@ political_decisions = {
 				1430 = { owned_by = NET }
 				1430 = { owned_by = BNF }
 			}
-            OR = {
-				vassal_of = NET
-				vassal_of = BNF
-			}
+			is_vassal = yes
             NOT = { has_global_flag = zilveren_verbond }
         }
 
@@ -196,10 +179,6 @@ political_decisions = {
             }
 			any_country = {
 				limit = {
-					OR = {
-						tag = BNF
-						tag = NET
-					}
 					owns = 1430
 					exists = yes
 				}
@@ -227,11 +206,7 @@ political_decisions = {
     DIM_BAJ_oranje_nassau = {
         picture = DIM_banjar
         potential = {
-            owns = 1413
-            OR = {
-				tag = NET
-				tag = BNF
-			}
+            owns = 1425
             OR = {
                 KLM = { vassal_of = THIS }
                 owns = 1427
@@ -283,10 +258,7 @@ political_decisions = {
         picture = DIM_cultuurgebied_oost_sumatra
         potential = {
             owns = 1406
-            OR = {
-				vassal_of = NET
-				vassal_of = BNF
-			}
+			is_vassal = yes
             NOT = {
                 OR = {
                     has_global_flag = cultuurgebied_oost_sumatra
@@ -325,10 +297,7 @@ political_decisions = {
         potential = {
             owns = 1406
             civilized = no
-            OR = {
-				vassal_of = NET
-				vassal_of = BNF
-			}
+            is_vassal = yes
             1406 = { NOT = { has_province_modifier = deli_maatschappij } }
         }
 
@@ -516,10 +485,6 @@ political_decisions = {
         potential = {
             year = 1835
             owns = 1430
-            OR = {
-				tag = NET
-				tag = BNF
-			}
             SLW = {
                 ai = yes
                 exists = yes
