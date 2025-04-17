@@ -95,6 +95,7 @@ political_decisions = {
             owns = 3901
             OR = {
                 tag = NAL
+				tag = VLK
                 AND = {
                     tag = SAF
                     is_vassal = no
@@ -332,32 +333,31 @@ political_decisions = {
             3895 = { empty = yes }
             2085 = { empty = yes }
             2086 = { empty = yes }
+			2078 = { empty = yes }
+			2079 = { empty = yes }
+			2080 = { empty = yes }
+			2082 = { empty = yes }
             NOT = { has_country_flag = claimed_namibia }
         }
 
         allow = {
             revolution_n_counterrevolution = 1
             invention = manifest_destiny_invention
-            invention = colonial_negotiations
-            OR = {
-				AND = { year = 1880 money = 10000000 }
-				AND = { year = 1881 money = 5000000 }
-				AND = { year = 1882 money = 2500000 }
-				AND = { year = 1883 money = 1250000 }
-				AND = { year = 1884 money = 712500 }
-				AND = { year = 1885 money = 356250 }
-				year = 1886
-			}
             2083 = { owned_by = THIS }
+			2081 = { owned_by = THIS }
             war = no
         }
 
         effect = {
             prestige = 5
-            2086 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			2084 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-			3895 = { secede_province = THIS any_pop = { literacy = -0.99 } }
-            2085 = { secede_province = THIS any_pop = { literacy = -0.99 } }
+            2086 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 add_core = THIS }
+			2084 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 add_core = THIS }
+			3895 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 add_core = THIS }
+            2085 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 add_core = THIS }
+			2078 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 add_core = THIS }
+			2079 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 add_core = THIS }
+			2080 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 add_core = THIS }
+			2082 = { secede_province = THIS any_pop = { literacy = -0.99 } life_rating = 25 add_core = THIS }
             set_country_flag = claimed_namibia
         }
 
@@ -404,63 +404,87 @@ political_decisions = {
         }
     }
 
-    greater_south_africa = {
-        picture = cape_map
+    pacify_the_tswana = {
+        picture = rhodesia_charter
         potential = {
-            owns = 2105
-            primary_culture = boer
-            owns = 2111
-            owns = 2085
-            NOT = {
-                AND = {
-                    TRN = { all_core = { is_core = THIS } }
-                    ORA = { all_core = { is_core = THIS } }
-                    NAL = { all_core = { is_core = THIS } }
-                    2084 = { is_core = THIS }
-                    2085 = { is_core = THIS }
-                }
-            }
-            NOT = { has_country_flag = greater_south_africa }
-        }
+            NOT = { has_country_flag = annexed_batawana }
+            OR = {
+				tag = VLK
+				tag = SAF
+			}
+			NOT = { has_global_flag = colonial_railroading_disabled }
+			NOT = { has_global_flag = batawana_off }
+		}
 
         allow = {
-            rank = 16
             nationalism_n_imperialism = 1
-            invention = manifest_destiny_invention
-            OR = {
-                ruling_party_ideology = fascist
-                ruling_party_ideology = reactionary
-            }
-            prestige = 150
-            money = 300000
-            war = no
-            is_vassal = no
+			OR = {
+				breech_loaded_rifles = 1
+				year = 1865
+			}
+			NOT = { any_greater_power = { war_with = THIS } }
+			TSW = { 
+				all_core = {
+					OR = {
+						owned_by = THIS
+						empty = yes
+					}
+				}
+			}
+			owns = 2094 #Griqua
+			owns = 2087 #Cape
+			is_disarmed = no
+			is_vassal = no
         }
 
         effect = {
-            set_country_flag = greater_south_africa
-            badboy = 10
-            prestige = 5
-            TRN = { all_core = { add_core = THIS } }
-            ORA = { all_core = { add_core = THIS } }
-            NAL = { all_core = { add_core = THIS } }
-            2574 = { add_core = THIS }
-            2077 = { add_core = THIS }
-            2083 = { add_core = THIS }
-            2086 = { add_core = THIS }
-            2084 = { add_core = THIS }
-            3895 = { add_core = THIS }
-            2085 = { add_core = THIS }
-			2075 = { add_core = THIS }
-			3882 = { add_core = THIS }
-			2076 = { add_core = THIS }
-			3649 = { add_core = THIS }
-			3717 = { add_core = THIS }
-			2078 = { add_core = THIS }
-			2079 = { add_core = THIS }
-			2080 = { add_core = THIS }
-			2082 = { add_core = THIS }
-			2081 = { add_core = THIS }
+            set_global_flag = batawana_off
+			set_country_flag = annexed_batawana
+            random_owned = {
+                limit = {
+                    owner = {
+                        owns = 2094
+                        OR = {
+							2095 = { empty = yes }
+						}
+                    }
+                }
+				2095 = {
+					secede_province = THIS
+					any_pop = { literacy = -0.99 }
+				}
+				2094 = {
+					add_core = SAF
+				}
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        owns = 2095
+                        OR = {
+							2077 = { empty = yes }
+						}
+                    }
+                }
+				2077 = {
+					secede_province = THIS
+					any_pop = { literacy = -0.99 }
+				}
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        owns = 2076
+                        OR = {
+							3649 = { empty = yes }
+						}
+                    }
+                }
+				3649 = {
+					secede_province = THIS
+					any_pop = { literacy = -0.99 }
+				}
+            }
         }
         ai_will_do = { factor = 1 }
     }
@@ -637,6 +661,45 @@ political_decisions = {
 				}
 				annex_to = THIS
 			}
+		}
+	}
+	
+	formalize_the_state_of_banyailand = {
+		picture = paul_kruger_saf
+		potential = {
+			OR = {
+				tag = VLK
+				tag = SAF
+			}
+			rank = 16
+			revolution_n_counterrevolution = 1
+			owns = 2087
+			NOT = { has_country_flag = state_of_banyailand }
+		}
+		allow = {
+			owns = 2070
+			owns = 2635
+			owns = 2068
+			invention = colonial_negotiations
+			ENG_2071 = {
+				owned_by = THIS
+			}
+			ENG_2068 = {
+				owned_by = THIS
+			}
+			has_country_flag = pioneer_column_boer
+		}
+		
+		effect = {
+		prestige = 5
+			ENG_2071 = {
+				add_core = THIS
+			}
+			ENG_2068 = {
+				add_core = THIS
+			}
+			2068 = { change_province_name = "Herculaastad" state_scope = { change_region_name = "Banyailand" } }
+			set_country_flag = state_of_banyailand
 		}
 	}
 #    Commented out for now, revise later
