@@ -12,13 +12,13 @@ country_event = {
         NOT = { rank = 16 }
         NOT = {
             AND = {
-                owns = 2111
-                owns = 2106
-                owns = 2101
-                owns = 1883
-                owns = 2087
-                owns = 2098
-                owns = 2088
+                owns = 2111 #Durban
+                owns = 2106 #Bloemhof
+                owns = 2101 #Bloemfontein
+                owns = 1883 #Ladybrand
+                owns = 2087 #Cape
+                owns = 2098 #Bisho
+                owns = 2088 #Springbokfoitein
             }
         }
         NOT = { has_country_flag = frontiers_lost }
@@ -43,7 +43,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        year = 1865
+        year = 1855
         owns = 2088
 		OR = {
 			primary_culture = boer
@@ -66,9 +66,10 @@ country_event = {
     option = {
         name = "EVT6003OPTA"
         set_country_flag = walvis_bay
+		set_global_flag = boers_in_namibia
         prestige = 5
         treasury = -10000
-        2083 = { secede_province = THIS life_rating = 25 any_pop = { literacy = -0.99 } }
+        2083 = { add_core = THIS secede_province = THIS life_rating = 25 any_pop = { literacy = -0.99 } }
         ai_chance = {
             factor = 100
             modifier = {
@@ -169,14 +170,12 @@ country_event = { #Transvaal wants to bring about a confederation with Oranje
     mean_time_to_happen = { months = 12 }
 
     trigger = {
-        ai = no
         tag = TRN
         owns = 2105
         year = 1857
         owns = 2106
         war = no
         is_vassal = no
-        is_greater_power = no
         ORA = {
             owns = 2101
             owns = 1883
@@ -239,15 +238,9 @@ country_event = {
         ORA = {
             all_core = { add_core = TRN }
         }
-        TRN = { inherit = THIS }
+        TRN = { country_event = 6055 }
         ai_chance = {
-            factor = 0.01
-            modifier = {
-                factor = 0.5
-                TRN = {
-                    NOT = { poor_strata_life_needs = .9 }
-                }
-            }
+            factor = 1
         }
     }
 
@@ -257,7 +250,7 @@ country_event = {
             country_event = 6006
         }
         ai_chance = {
-            factor = 99.99
+            factor = 9
         }
     }
 }
@@ -381,20 +374,20 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        owns = 2087
+        owns = 2087 #Cape
         OR = {
-			primary_culture = boer
+			tag = VLK
 			AND = {
 				tag = SAF
 				primary_culture = afro_dutch
 			}
 		}
         invention = manifest_destiny_invention
-        owns = 2100
-        owns = 2098
-        owns = 2111
-        owns = 2113
-        owns = 2105
+        owns = 2100 #Umtata
+        owns = 2098 #Bisho
+        owns = 2111 #Durban
+        owns = 2113 #Richardsbaai
+        owns = 2105 #Pretoria
 		OR = {
 		    owns = 2094
 			AND = {
@@ -588,16 +581,16 @@ country_event = {
 
     trigger = {
         has_global_flag = berlin_conference
-        tag = SAF
-        owns = 2087
-        AND = {
-			2068 = { owned_by = SAF }
-            2070 = { owned_by = SAF }
-            2635 = { owned_by = SAF }
-        }
         OR = {
-            2068 = { any_neighbor_province = { owned_by = THIS } }
-            2068 = { any_neighbor_province = { owner = { civilized = no in_sphere = THIS } } }
+			tag = SAF
+			tag = VLK
+		}
+		has_country_flag = new_generation_voortrekkers
+        AND = {
+			2069 = { owned_by = THIS }
+            2071 = { owned_by = THIS }
+            2072 = { owned_by = THIS }
+			2073 = { owned_by = THIS }
         }
         NOT = { has_country_flag = pioneer_column_boer }
     }
@@ -605,15 +598,12 @@ country_event = {
     option = {
         name = "EVT6011OPTA"
         set_country_flag = pioneer_column_boer
-        2070 = { secede_province = THIS add_core = SAF }
-        2635 = { secede_province = THIS add_core = SAF }
-        2068 = { secede_province = THIS add_core = SAF }
-        2068 = { change_province_name = "Herculaastad" }
-		set_global_flag = colonizer_rename_2068
-		clr_global_flag = british_rename_2068
-		clr_global_flag = catalan_rename_2068
-		clr_global_flag = portuguese_rename_2068
-		clr_global_flag = french_rename_2068
+        2072 = { secede_province = THIS add_core = THIS }
+        2073 = { secede_province = THIS add_core = THIS }
+        2071 = { secede_province = THIS add_core = THIS }
+		2069 = { secede_province = THIS add_core = THIS }
+        2072 = { change_province_name = "Jacobia" state_scope = { change_region_name = "Reystaat" } }
+		set_global_flag = colonizer_rename_2071
 		2108 = { any_pop = { limit = { type = soldiers culture = boer } move_pop = 2068 } }
         2108 = { any_pop = { limit = { type = artisans culture = boer } pop_type = soldiers } }
     }
@@ -658,8 +648,8 @@ country_event = {
 
     option = {
         name = "EVT6013OPTC"
-        capital = 2111
-        2111 = {
+        capital = 3902
+        3902 = {
             life_rating = 5
             add_province_modifier = {
                 name = recently_built_city
@@ -672,18 +662,6 @@ country_event = {
         name = "EVT6013OPTD"
         capital = 2105
         2105 = {
-            life_rating = 5
-            add_province_modifier = {
-                name = recently_built_city
-                duration = 365
-            }
-        }
-    }
-
-    option = {
-        name = "EVT6013OPTE"
-        capital = 2106
-        2106 = {
             life_rating = 5
             add_province_modifier = {
                 name = recently_built_city
@@ -2168,6 +2146,120 @@ country_event = {
 }
 
 country_event = {
+    id = 6055
+	title = "The Voortrekker Konfederasie"
+	desc = "The voortrekkers of Oranje have accepted our proposal for union! The South African Republic grows!"
+	picture = "volksraad"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "As brothers in arms, we don't need to fear the british no more!"
+		prestige = 3
+		inherit = ORA
+		centralization = confederalism
+		set_global_flag = volkstaat_formed
+        TRN = {
+			all_core = {
+				add_core = VLK
+				remove_core = TRN
+				}
+			}
+		ORA = {
+			all_core = {
+				add_core = VLK
+				remove_core = ORA
+			}
+		}
+		NAL = {
+			all_core = {
+				add_core = VLK
+				remove_core = NAL
+			}
+		}
+		NRB = {
+			all_core = {
+				add_core = VLK
+				remove_core = NRB
+			}
+		}
+		change_tag = VLK
+		any_pop = {
+			limit = { is_primary_culture = yes }
+			militancy = -4
+		}
+		any_country = {
+			limit = {
+				OR = {
+					tag = TRN
+					tag = ORA
+					tag = NAL
+					tag = NRB
+				}
+				exists = yes
+				NOT = { tag = THIS }
+			}
+			country_event = 11101
+		}
+            add_country_modifier = { name = boer_republic duration = -1 }
+	}
+}
+
+country_event = {
+	id = 9056
+	title = "A New Generation of Voortrekkers?"
+	desc = "EVTDESC9056"
+	picture = "pioneer_wagons"
+	
+	fire_only_once = yes
+	mean_time_to_happen = { months = 12 }
+	
+	trigger = {
+		OR = {
+			tag = SAF
+			tag = VLK
+		}
+		is_core = 2095
+		owns = 2077
+		owns = 2076
+		owns = 2087
+		rank = 16
+		invention = manifest_destiny_invention
+		is_vassal = no
+		is_disarmed = no
+		has_country_flag = annexed_batawana
+		NOT = { has_global_flag = colonial_railroading_disabled }
+		NOT = { has_country_flag = new_generation_voortrekkers }
+	}
+	
+	option = {
+		name = "People will settle anything these days..."
+        ENG_2074 ={
+				add_core = THIS
+				any_pop = {
+					limit = { NOT = { culture = boer } }
+					militancy = 4
+				}
+		}
+		2095 = {
+			any_pop = {
+				limit = { NOT = { culture = boer } }
+				militancy = 4
+			}
+			}
+		2081 = {
+			add_core = THIS
+			any_pop = {
+				limit = { NOT = { culture = boer } }
+				militancy = 4
+			}
+		}
+		prestige = 5
+		set_country_flag = new_generation_voortrekkers
+	}
+}
+
+country_event = {
 
     id = 995444
     title = "Colonial Annexations"
@@ -2178,7 +2270,10 @@ country_event = {
     mean_time_to_happen = { months = 4 }
 
     trigger = {
-        tag = SAF
+        OR = {
+			tag = SAF
+			tag = VLK
+		}
         TSW = {
             vassal_of = THIS
         }

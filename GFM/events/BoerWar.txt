@@ -2498,9 +2498,11 @@ country_event = { #Called from 98247 first option.
             diplomatic_influence = { who = THIS value = 50 }
         }
 		random_owned = {
-			limit = {
-				owner = {
-					BSH = { vassal_of = FROM }
+			limit = { 
+					OR = { 
+					is_core = SAF
+					is_core = KHA 
+					is_core = XHO
 				}
 			}
 			owner = {
@@ -2544,7 +2546,13 @@ country_event = { #Called from 98247 second option.
         prestige = 25
         FROM = {
             any_owned = {
-                limit = { is_core = SAF }
+                limit = { 
+					OR = {
+					is_core = SAF
+					is_core = KHA
+					is_core = XHO
+				}
+			}
                 secede_province = THIS
             }
             casus_belli = {
@@ -2611,8 +2619,7 @@ country_event = {
     trigger = {
         year = 1864
         OR = {
-            tag = ENG
-            tag = ENL
+            primary_culture = british
 			tag = SAF
         }
 		KHA = {
@@ -2702,8 +2709,7 @@ country_event = {
     trigger = {
         year = 1876
         OR = {
-            tag = ENG
-            tag = ENL
+            primary_culture = british
 			tag = SAF
         }
         ZUL = {
@@ -2775,8 +2781,7 @@ country_event = {
 
     trigger = {
         OR = {
-            tag = ENG
-            tag = ENL
+            primary_culture = british
 			tag = SAF
         }
         neighbour = XHO
@@ -2835,8 +2840,7 @@ country_event = {
 
     trigger = {
         OR = {
-            tag = ENG
-            tag = ENL
+            primary_culture = british
 			tag = SAF
         }
         neighbour = XHO
@@ -2957,6 +2961,7 @@ country_event = {
 		OR = {
 			tag = ENG
 			tag = SAF
+			tag = VLK
 		}
         OR = {
             2092 = { empty = yes } #Beaufort
