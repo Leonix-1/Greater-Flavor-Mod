@@ -413,6 +413,7 @@ political_decisions = {
             primary_culture = boer
             is_vassal = no
 		    NOT = { has_country_flag = cape_qualified_franchise }
+			NOT = { has_country_flag = apartheid_saf }
         }
 
         allow = {
@@ -422,6 +423,7 @@ political_decisions = {
 			    government = democracy
 	            government = hms_government
 				government = radical_republic
+				government = proletarian_dictatorship
 			}
 			NOT = {
 				ruling_party_ideology = conservative
@@ -432,12 +434,35 @@ political_decisions = {
 
         effect = {
             prestige = 5
-            political_reform = all_voting_pops
-			nationalvalue = nv_equality
-			add_accepted_culture = griqua
+            political_reform = culture_voting_only
+			add_accepted_culture = afro_dutch
 			set_country_flag = cape_qualified_franchise
         }
     }
+	
+	open_franchise_for_saf = {
+		picture = embrace_minority
+		potential = {
+			tag = SAF
+			nationalvalue = nv_equality
+			NOT = { has_country_flag = integrating_natives }
+		}
+		
+		allow = {
+			OR = { accepted_culture = griqua primary_culture = griqua }
+			citizens_rights = all_voting_pops
+			citizenship_policy = full_citizenship
+			positivism = 1
+		}
+		
+		effect = {
+			set_country_flag = integrating_natives
+			add_accepted_culture = khoisan
+			add_accepted_culture = xhosa
+			add_accepted_culture = nguni
+			prestige = 5
+		}
+	}
 
     enact_dual_monarchy = {
 		picture = enact_dual_monarchy
