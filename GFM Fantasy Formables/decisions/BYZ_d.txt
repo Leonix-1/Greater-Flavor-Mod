@@ -313,10 +313,10 @@ political_decisions = {
             811 = { change_province_name = "Sexaginta Prista" }
             813 = { change_province_name = "Fyllovolos" }
             814 = { change_province_name = "Theodorias" }
-            815 = { change_province_name = "Filippoúpoli" }
+            815 = { change_province_name = "FilippoÃºpoli" }
             816 = { change_province_name = "Irinopolis" }
             808 = { change_province_name = "Skaptopara" }
-			858 = { change_province_name = "Voutélion" }
+			858 = { change_province_name = "VoutÃ©lion" }
             1780 = { change_province_name = "Deborus" }
             818 = { change_province_name = "Dorostolon" }
             674 = { change_province_name = "Konstantia" }
@@ -723,3 +723,79 @@ political_decisions = {
         }
     }
 }
+    form_byzantine_empire_spain = {
+		picture = form_byzantine_empire
+        potential = {
+            OR = {
+				tag = SPA
+				tag = SPC
+            has_global_flag = fantasy_countries_enabled
+			NOT = { global_flag = reconquista }
+        }
+
+        allow = {
+			OR = {
+				is_greater_power = yes
+				has_global_flag = you_are_playing_mp
+			}
+			war = no
+			is_vassal = no
+			834 = { owned_by = THIS }
+			860 = { owned_by = THIS }
+			839 = { owned_by = THIS }
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+                government = absolute_empire
+                government = semi_constitutional_empire
+                government = constitutional_empire
+            }
+        }
+
+        effect = {
+            change_tag = BYZ
+			random_owned = {
+				limit = {
+					owner = {
+						government = absolute_monarchy
+					}
+				}
+				owner = {
+					government = absolute_empire
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						government = prussian_constitutionalism
+					}
+				}
+				owner = {
+					government = semi_constitutional_empire
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						government = hms_government
+					}
+				}
+				owner = {
+					government = constitutional_empire
+				}
+			}
+            capital = 860
+           GRE = {
+                all_core = {
+                	add_core = BYZ
+            }
+		}
+		3302 = { add_core = THIS }
+		859 = { add_core = THIS }
+            prestige = 40
+		badboy = 12
+            set_country_flag = i_am_byz
+			BYZ = { country_event = 
+        }
+    }
