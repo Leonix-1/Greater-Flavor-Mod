@@ -730,6 +730,7 @@ political_decisions = {
 				tag = SPA
 				tag = SPC
             has_global_flag = fantasy_countries_enabled
+			has_country_flag = ere_claims_pressed
 			NOT = { global_flag = reconquista }
         }
 
