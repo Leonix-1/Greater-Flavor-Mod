@@ -998,3 +998,102 @@ country_event = {
 		prestige = -5
 	}
 }
+# Carlist appointment of Bourbons in France by owning French cores #
+country_event = {
+	id = 80432209
+	title = "EVTNAME00208"
+	desc = "EVTDESC00208"
+	picture = "cuba_economy"
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPC
+		has_country_flag = bourbon_exile
+		any_owned = { is_core = FRA }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "EVTOPTA00208"
+		prestige = 20
+		any_owned = { 
+				limit = { 
+						is_core = FRA 
+			} 
+		}
+		secede_province = BOR
+		FRA = { 
+				any_owned = { 
+				 			limit = { 
+									is_core = FRA 
+			}
+		}  
+	add_core = BOR
+	country_event = 80432212
+	}
+		BOR = {
+				create_alliance = SPC
+	}
+}
+	option = {
+		name = "EVTOPTB00208"
+		prestige = -35
+	}
+}
+# Carlist Loss #
+country_event = {
+	id = 80432215
+	title = "EVTNAME00208"
+	desc = "EVTDESC00208"
+	fire_only_once = yes
+			
+		option = {
+		name = "EVTOPTB00208"
+		prestige = -50
+	}
+}
+# Carlist Victory #
+country_event = { 
+	id = 80432210
+	title = "EVTNAME00208"
+	desc = "EVTDESC00208"
+	fire_only_once = yes
+
+		option = {
+		name = "EVTOPTB00208"
+		prestige = 50
+		badboy = -7
+		BOR = {
+			relation = {
+				who = THIS
+				value = 200
+			}
+		country_event = 80432216
+		}
+	}
+		option = {
+		name = "EVTOPTB00208"
+		prestige = 50
+		badboy = 10
+		BOR = {
+			relation = {
+				who = THIS
+				value = 50
+			}
+		country_event = 80432217
+		}
+	}
+		option = {
+		name = "EVTOPTB00208"
+		prestige = 150
+		badboy = 24.99
+		BOR = {
+			relation = {
+				who = THIS
+				value = -150
+			}
+		country_event = 80432218
+		}
+	}
+}
