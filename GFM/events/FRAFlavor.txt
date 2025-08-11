@@ -1841,3 +1841,62 @@ country_event = {
 		SPC = { country_event = 80432215 }
 	}
 }
+# Borbon Succession War Events At Expense Of French #
+country_event = {
+id = 80432216
+title =
+desc = 
+fire_only_once = yes
+	option = {
+		add_country_modifier = { name = anti_bourbon_sentiment duration = 7300 }
+		government = absolute_monarchy
+        ruling_party_ideology = reactionary
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+	}
+}
+country_event = {
+id = 80432217
+title =
+desc = 
+fire_only_once = yes
+	option = {
+		prestige = -75
+		add_country_modifier = { name = anti_bourbon_sentiment duration = 12775 }
+		government = absolute_monarchy
+        ruling_party_ideology = reactionary
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+		any_owned = { limit = { NOT = { is_core = BOR } } secede_province = SPC }
+	}
+}
+country_event = {
+id = 80432218
+title = "EVTNAME00203"
+desc = "EVTDESC00203"
+picture = "maxii"
+fire_only_once = yes
+		option = {
+		name = "EVTOPTB00208"
+		prestige = -250
+		add_country_modifier = { name = anti_bourbon_sentiment duration = -1 }
+		government = absolute_monarchy
+        ruling_party_ideology = reactionary
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+		any_owned = { limit = { NOT = { is_core = BOR } } secede_province = SPC }
+		}
+	FROM = { create_vassal = THIS }
+	}
