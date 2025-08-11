@@ -8,6 +8,7 @@ political_decisions = {
             NOT = { has_global_flag = fernando_died }
             NOT = { has_global_flag = reconquista }
 			NOT = { has_country_flag = only_one_reconquista }
+			NOT = { has_country_flag = ere_claim_pressed }
         }
 
         allow = {
