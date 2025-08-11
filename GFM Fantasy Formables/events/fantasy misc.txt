@@ -56,38 +56,18 @@ country_event = {
 
 }
 country_event = {
-    id = 23456434
-    title = "Changing to Jerusalem..."
-    desc = "To change your tag more efficiently in MC click OK:"
-    is_triggered_only = yes
+    id = 144321 
+    title = "Eastern Roman Question"
+    desc = "We have claimed our throne in the city of world's desire, but a new question lays before us... Shall we embrace our Greek roots or shall we continue as a Spanish monarchy?"
+    fire_only_once = yes
 
     option = {
-        name = "OK"
-            PLS = {
-                all_core = {
-                    add_core = JER
-                }
-            }
-            LBN = {
-                all_core = {
-                    add_core = JER
-                }
-            }
-            change_tag = JER
-            add_accepted_culture = syriac
-            random_pop = {
-                limit = {
-                    has_pop_culture = french
-                    type = soldiers
-                    location = { continent = europe }
-                }
-                move_pop = 917
-            }
-            release = MLT
-			854 = { remove_core = THIS }
-        ai_chance = {
-            factor = 100
+        name = "We will not abandon our identity for the sake of supposed 'heritage,' España is the seat of power and Spanish is our language and people!!"
+           BYZ = { { primary_culture = spanish } add_accepted_culture = greek }
         }
+    option = {
+        name = "We claimed the throne and proved true to the world that we are Rome, Hellenos is the seat of power and her people are its masters. Glory to the Empire!"
+           BYZ = { { primary_culture = greek } add_accepted_culture = spanish }
     }
 
 }
