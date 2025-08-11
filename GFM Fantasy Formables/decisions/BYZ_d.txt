@@ -723,6 +723,40 @@ political_decisions = {
         }
     }
 }
+    claim_byzantine_empire_spain = {
+		picture = form_byzantine_empire
+        potential = {
+            OR = {
+				tag = SPA
+				tag = SPC
+            has_global_flag = fantasy_countries_enabled
+			NOT = { global_flag = reconquista }
+        }
+}
+        allow = {
+			OR = {
+				is_greater_power = yes
+				has_global_flag = you_are_playing_mp
+			}
+			war = no
+			is_vassal = no
+            OR = {
+                government = absolute_monarchy
+                government = absolute_empire
+            }
+        }
+
+        effect = {
+            GRE = 
+				relation = {
+						who = THIS
+						value = -200
+		}
+		badboy = 5
+            set_country_flag = ere_claims_pressed
+        }
+    }
+}
     form_byzantine_empire_spain = {
 		picture = form_byzantine_empire
         potential = {
@@ -730,11 +764,11 @@ political_decisions = {
 				tag = SPA
 				tag = SPC
             has_global_flag = fantasy_countries_enabled
-			has_country_flag = ere_claims_pressed
 			NOT = { global_flag = reconquista }
         }
-
+}
         allow = {
+			has_country_flag = ere_claims_pressed
 			OR = {
 				is_greater_power = yes
 				has_global_flag = you_are_playing_mp
@@ -797,6 +831,7 @@ political_decisions = {
             prestige = 40
 		badboy = 12
             set_country_flag = i_am_byz
-			BYZ = { country_event = 
+			BYZ = { country_event = 144321 }
         }
     }
+}
