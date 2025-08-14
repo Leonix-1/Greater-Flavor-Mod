@@ -65,11 +65,163 @@ political_decisions = {
         }
 
         effect = {
-			tag = SPA
 			SPA = {
 				limit = { 
 					is_core = HAI 
+					tag = SPA
 			}
-		}  
 	add_core = SPA
-	
+			random_owned = { limit = { owner = { tag = SPA owns = 2213 owns = 2214 } } owner = { badboy = 5 } }
+			random_owned = { limit = { owner = { tag = SPA NOT = { owns = 2213 owns = 2214 } } } owner = { badboy = 10 } }
+		}  
+			SPC = {
+				limit = {
+					tag = SPC
+					exists = HAI
+				casus_belli = { target = HAI type = conquest_any months = 36 }
+				OR = {
+					AND = {
+						exists = HAI
+						exists = DOM
+					}
+					effect = {
+				casus_belli = { target = DOM type = conquest_any months = 36 }
+				casus_belli = { target = HAI type = conquest_any months = 36 }
+					}
+				}
+			}
+		}
+	}
+}
+    revoke_guadaloupe_hidalgo = {
+        picture = CAL_greater_california
+        potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			OR = {
+				has_global_flag = maw_usa_victory
+				132 = { NOT = { owner = THIS } }
+				105 = { NOT = { owner = THIS } }
+				102 = { NOT = { owner = THIS } }
+				4064 = { NOT = { owner = THIS } }
+				89 = { NOT = { owner = THIS } }
+				97 = { NOT = { owner = THIS } }
+				109 = { NOT = { owner = THIS } }
+				129 = { NOT = { owner = THIS } }
+				104 = { NOT = { owner = THIS } } 
+			}
+			NOT = { has_country_flag = mexico_reconquest }
+			has_country_flag = reconquista_win
+        }
+        allow = {
+			war = no
+			is_disarmed = no
+			is_vassal = no
+			NOT = { has_country_modifier = recently_lost_war }
+            OR = { war_policy = pro_military war_policy = jingoism }
+        }
+        effect = {
+            badboy = 15
+            set_country_flag = mexico_reconquest
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = USA
+                        tag = CSA
+                        tag = CAL
+                        tag = TEX
+                        tag = DES
+                    }
+                }
+                country_event = 72739
+            }
+			OR = {
+				AND = {
+					tag = SPA
+					has_country_flag = reconquista_win
+						effect = {
+            		MEX_85 = { add_core = SPA } #California
+            		MEX_85_2 = { add_core = SPA } #California
+            		TEX_132 = { add_core = SPA } #Texas
+            		MEX_97 = { add_core = SPA } #Utah
+            		129 = { add_core = SPA } #Oklahoma
+					108 = { add_core = SPA } #Colorado
+					3560 = { add_core = SPA } #Colorado
+					109 = { add_core = SPA } #Colorado
+					4176 = { add_core = SPA } #Colorado
+					4120 = { add_core = SPA } #Colorado
+					103 = { add_core = SPA } #Colorado
+					129 = { add_core = SPA } #Colorado
+					MEX_103 = { add_core = SPA } #New Mexico
+						}
+					}
+				tag = SPC
+				has_country_flag = reconquista_win
+					effect = {
+					MEX_85 = { add_core = MEE } #California
+            		MEX_85_2 = { add_core = MEE } #California
+            		TEX_132 = { add_core = MEE } #Texas
+            		MEX_97 = { add_core = MEE } #Utah
+            		129 = { add_core = MEE } #Oklahoma
+					108 = { add_core = MEE } #Colorado
+					3560 = { add_core = MEE } #Colorado
+					109 = { add_core = MEE } #Colorado
+					4176 = { add_core = MEE } #Colorado
+					4120 = { add_core = MEE } #Colorado
+					103 = { add_core = MEE } #Colorado
+					129 = { add_core = MEE } #Colorado
+					MEX_103 = { add_core = MEE } #New Mexico
+					}
+				}
+        }
+        ai_will_do = {
+            factor = 1
+			modifier = {
+				factor = 0
+				USA = { ai = no }
+			}
+        }
+    }
+    revoke_adam_onis = {
+        picture = CAL_greater_california
+        potential = {
+			OR = {
+				tag = SPA
+				tag = SPC
+			}
+			NOT { has_global_flag = maw_usa_victory } 
+			NOT = { has_country_flag = mexico_reconquest }
+			has_country_flag = reconquista_win
+        }
+        allow = {
+			war = no
+			is_disarmed = no
+			is_vassal = no
+			NOT = { has_country_modifier = recently_lost_war }
+            OR = { war_policy = pro_military war_policy = jingoism }
+        }
+        effect = {
+            badboy = 25
+            set_country_flag = adam_onis_revoke
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = USA
+                        tag = CSA
+                        tag = CAL
+                        tag = TEX
+                        tag = DES
+                    }
+                }
+                country_event = 7273900
+            }
+        ai_will_do = {
+            factor = 1
+			modifier = {
+				factor = 0
+				USA = { ai = no }
+			}
+        }
+    }
