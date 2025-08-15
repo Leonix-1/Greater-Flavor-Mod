@@ -794,6 +794,375 @@ country_event = {
 }
 
 country_event = {
+    id = 727390
+    title = "The Spanish Reconquista"
+    desc = "EVTDESC72739"
+    picture = mexico_soldiers
+    is_triggered_only = yes
+
+    option = {
+        name = "Let them come! This is American clay!"
+        relation = {
+            who = FROM
+            value = -200
+        }
+        ai_chance = {
+            factor = 100
+        }
+	war = {
+		target = FROM
+		attacker_wargoal = { scripted_war_huge }
+		defender_wargoal = { scripted_war_huge }
+    }
+
+	option = {
+        name = "Give them what they want, respect the current treaty."
+		prestige = -25
+		any_owned = {
+			limit = {
+				OR = {
+					is_core = SPA
+					is_core = MEE
+			}
+			secede_province = FROM
+		}
+		any_pop = {
+			limit = {
+				is_accepted_culture = yes
+			}
+			militancy = 4
+			consciousness = 8
+		}
+		any_pop = {
+			limit = {
+				is_accepted_culture = no
+			}
+			militancy = 2
+			consciousness = 6
+		}
+		any_pop = {
+			limit = {
+				has_pop_culture = mexican
+			}
+			militancy = -1
+			consciousness = -2
+		}
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+country_event = {
+    id = 7273900
+    title = "The Spanish Demand"
+    desc = "EVTDESC72739"
+    picture = mexico_soldiers
+    is_triggered_only = yes
+
+    option = {
+        name = "Let them come! We bought it fair and square!"
+        relation = {
+            who = FROM
+            value = -200
+        }
+        ai_chance = {
+            factor = 100
+        }
+	war = {
+		target = FROM
+		attacker_wargoal = { scripted_war_big }
+		defender_wargoal = { scripted_war_big }
+    }
+
+country_event = {
+    id = 727391
+    title = "The Spanish victory"
+    desc = "EVTDESC72739"
+    picture = mexico_soldiers
+    fire_only_once = yes
+    is_triggered_only = yes
+
+	potential
+    option = {
+        name = "We will respect the Adams-Onis Treaty."
+		prestige = 25
+        random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123574 } } }
+		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				badboy = 0.90
+			}
+		}
+    }
+    option = {
+        name = "Take the Oregon territory. Â§RGain 5 infamyÂ§W"
+		badboy = 5
+		prestige = 40
+		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
+		TEX_132 = { add_core = MEX }
+		USA_81 = { add_core = MEX }
+		USA_78 = { add_core = MEX }
+		USA_91 = { add_core = MEX }
+		114 = { add_core = MEX } #Idaho
+		111 = { add_core = MEX } #Idaho
+		3468 = { add_core = MEX }
+		111 = { add_core = MEX }
+		113 = { add_core = MEX }
+		114 = { add_core = MEX }
+		3467 = { add_core = MEX }
+		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123575 } } }
+		set_country_flag = has_taken_oregon_or_more
+		set_global_flag = mex_took_oregon_maw
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				badboy = 0.89
+			}
+		}
+    }
+    option = {
+        name = "All land West of the Mississippi is Mexican. Â§RGain 15 infamyÂ§W"
+		badboy = 15
+		prestige = 30
+		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
+		SPA = {
+			ai = no
+		USA_81 = { add_core = SPA }
+		USA_78 = { add_core = SPA }
+		USA_91 = { add_core = SPA }
+		114 = { add_core = SPA } #Idaho
+		111 = { add_core = SPA } #Idaho
+		USA_116 = { add_core = SPA }
+		USA_106 = { add_core = SPA }
+		USA_111 = { add_core = SPA }
+		USA_118 = { add_core = SPA }
+		USA_121 = { add_core = SPA }
+		USA_124 = { add_core = SPA }
+		USA_144 = { add_core = SPA }
+		USA_148 = { add_core = SPA }
+		USA_151 = { add_core = SPA }
+		USA_126 = { add_core = SPA }
+		USA_129 = { add_core = SPA }
+		USA_139 = { add_core = SPA }
+		TEX_132 = { add_core = SPA }
+		USA_158 = { add_core = SPA }
+	}
+		SPC = {
+			ai = no
+		USA_81 = { add_core = SPC }
+		USA_78 = { add_core = SPC }
+		USA_91 = { add_core = SPC }
+		114 = { add_core = SPC } #Idaho
+		111 = { add_core = SPC } #Idaho
+		USA_116 = { add_core = SPC }
+		USA_106 = { add_core = SPC }
+		USA_111 = { add_core = SPC }
+		USA_118 = { add_core = SPC }
+		USA_121 = { add_core = SPC }
+		USA_124 = { add_core = SPC }
+		USA_144 = { add_core = SPC }
+		USA_148 = { add_core = SPC }
+		USA_151 = { add_core = SPC }
+		USA_126 = { add_core = SPC }
+		USA_129 = { add_core = SPC }
+		USA_139 = { add_core = SPC }
+		TEX_132 = { add_core = SPC }
+		USA_158 = { add_core = SPC }
+        random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123576 } } }
+        random_owned = { limit = { owner = { TEX = { exists = yes } } } owner = { TEX = { country_event = 123576 } } }
+		set_country_flag = has_taken_oregon_or_more
+		set_global_flag = mex_took_mississippi_maw
+		ai_chance = {
+			factor = 85
+			modifier = {
+				factor = 0
+				badboy = 0.4
+			}
+		}
+    }
+    option = {
+        name = "All lands West of the Mississippi and Florida are Mexican. Â§RGain 20 infamyÂ§W"
+		badboy = 20
+		prestige = 25
+		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
+		USA_81 = { add_core = MEX }
+		USA_78 = { add_core = MEX }
+		USA_91 = { add_core = MEX }
+		114 = { add_core = MEX } #Idaho
+		111 = { add_core = MEX } #Idaho
+		USA_116 = { add_core = MEX }
+		USA_106 = { add_core = MEX }
+		USA_111 = { add_core = MEX }
+		USA_118 = { add_core = MEX }
+		USA_121 = { add_core = MEX }
+		USA_124 = { add_core = MEX }
+		USA_144 = { add_core = MEX }
+		USA_148 = { add_core = MEX }
+		USA_151 = { add_core = MEX }
+		USA_126 = { add_core = MEX }
+		USA_129 = { add_core = MEX }
+		USA_139 = { add_core = MEX }
+		TEX_132 = { add_core = MEX }
+		USA_158 = { add_core = MEX }
+		USA_200 = { add_core = MEX }
+		197 = { add_core = MEX }
+		194 = { add_core = MEX }
+		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123577 } } }
+		random_owned = { limit = { owner = { TEX = { exists = yes } } } owner = { TEX = { country_event = 123577 } } }
+		set_country_flag = has_taken_oregon_or_more
+		set_global_flag = mex_took_florida_maw
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				NOT = { badboy = 0.2 }
+				has_country_flag = texas_recaptured
+			}
+		}
+    }
+}
+
+country_event = {
+    id = 123574
+    title = "A Peace with Mexico"
+    desc = "After losing the Mexican-American war, the Mexicans have decided to keep the land from the Adams-OnÃ­s Treaty."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "What a humiliation."
+        any_owned = { limit = { OR = { region = TEX_132 is_core = SPA } } secede_province = UTI }
+		SPA = { inherit = UTI }
+    }
+}
+country_event = {
+    id = 123575
+    title = "A Peace with Mexico"
+    desc = "After losing the Mexican-American war, we are forced to accept the Mexican demands through the Treaty of San Antonio."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "What a humiliation."
+		CAN_13 = { remove_core = USA }
+        any_owned = {
+			limit = {
+				OR = {
+					is_core = MEX
+					region = USA_81
+					region = USA_78
+					region = USA_91
+					region = CAN_13
+					province_id = 3468
+					province_id = 111
+					province_id = 113
+					province_id = 114
+					province_id = 3467
+				}
+			}
+			secede_province = UTI
+		}
+		random_owned = { limit = { owner = { UOR = { exists = yes vassal_of = THIS } } } owner = { UOR = { all_core = { add_core = FROM secede_province = THIS secede_province = UTI } } } }
+		FROM = { inherit = UTI }
+    }
+}
+country_event = {
+    id = 123576
+    title = "A Peace with Mexico"
+    desc = "After losing the Mexican-American war, we are forced to accept the Mexican demands through the Treaty of San Antonio."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "What a humiliation."
+        any_owned = {
+			limit = {
+				OR = {
+					is_core = FROM
+					region = CAN_13
+					region = USA_81
+					region = USA_78
+					region = USA_91
+					region = USA_116
+					region = USA_106
+					region = USA_111
+					region = USA_118
+					region = USA_121
+					region = USA_124
+					region = USA_144
+					region = USA_148
+					region = USA_151
+					region = USA_126
+					region = USA_129
+					region = USA_139
+					region = TEX_132
+					region = USA_158
+					province_id = 111
+					province_id = 114
+				}
+				NOT = { province_id = 140 }
+			}
+			secede_province = UTI
+        }
+		random_owned = { limit = { owner = { UOR = { exists = yes vassal_of = THIS } } } owner = { UOR = { all_core = { add_core = FROM secede_province = THIS secede_province = UTI } } } }
+		FROM = { inherit = UTI }
+		FROM = { country_event = { id = 4207101 days = 3 } }
+		remove_country_modifier = you_are_going_to_the_usa
+    }
+}
+country_event = {
+    id = 123577
+    title = "A Peace with Mexico"
+    desc = "After losing the Mexican-American war, we are forced to accept the Mexican demands through the Treaty of San Antonio."
+    picture = "mexico-us-treaty"
+    fire_only_once = yes
+    is_triggered_only = yes
+    option = {
+        name = "What a humiliation."
+        any_owned = {
+			limit = {
+				OR = {
+					is_core = FROM
+					region = CAN_13
+					region = USA_81
+					region = USA_78
+					region = USA_91
+					region = USA_116
+					region = USA_106
+					region = USA_111
+					region = USA_118
+					region = USA_121
+					region = USA_124
+					region = USA_144
+					region = USA_148
+					region = USA_151
+					region = USA_126
+					region = USA_129
+					region = USA_139
+					region = TEX_132
+					region = USA_158
+					province_id = 194
+					province_id = 197
+					region = USA_200
+					province_id = 111
+					province_id = 114
+				}
+			}
+			secede_province = UTI
+        }
+		random_owned = { limit = { owner = { UOR = { exists = yes vassal_of = THIS } } } owner = { UOR = { all_core = { add_core = FROM secede_province = THIS secede_province = UTI } } } }
+		remove_country_modifier = you_are_going_to_the_usa
+		FROM = { inherit = UTI }
+		FROM = { country_event = { id = 4207101 days = 3 } }
+		139 = { add_province_modifier = { name = orleans_growth duration = 8030 } }
+    }
+}
+
+
+country_event = {
     id = 72881
     title = "Cuba Joins the Confederacy"
     desc = "The plantation elite of Cuba have joined the Confederate cause."
@@ -935,7 +1304,7 @@ country_event = {
         }
     }
     option = {
-        name = "Peace is the only way. §GLose 5 infamy§W"
+        name = "Peace is the only way. Â§GLose 5 infamyÂ§W"
         badboy = -5
         any_pop = {
             scaled_militancy = {
@@ -1110,7 +1479,7 @@ country_event = {
     }
 
     option = {
-        name = "The bourgeois swine got they deserved. §RGain 2 infamy§W"
+        name = "The bourgeois swine got they deserved. Â§RGain 2 infamyÂ§W"
         set_global_flag = sack_monaco
         badboy = 2
         money = 5000
@@ -1162,7 +1531,7 @@ country_event = { ####Start####
     picture = transylvania
 
     option = {
-        name = "A ceremonial friendship treaty. §GLose 5 infamy§W"
+        name = "A ceremonial friendship treaty. Â§GLose 5 infamyÂ§W"
         badboy = -5
         HUN = {
             relation = {
@@ -1401,7 +1770,7 @@ country_event = { ####Romania hears support for Hungary####
     }
 
     option = {
-        name = "Agree to the treaty. §GLose 4 infamy§W"
+        name = "Agree to the treaty. Â§GLose 4 infamyÂ§W"
         prestige = -5
         badboy = -4
 		scaled_consciousness = {
@@ -1466,7 +1835,7 @@ country_event = { ####Romania's rebuttal####
     }
 
     option = {
-        name = "The treaty will be enforced! §RGain 3 infamy§W"
+        name = "The treaty will be enforced! Â§RGain 3 infamyÂ§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = ROM
@@ -1595,7 +1964,7 @@ country_event = { ####Romania hears request for money approved####
     picture = transylvania
 
     option = {
-        name = "Sign the Treaty. §GLose 2 infamy§W"
+        name = "Sign the Treaty. Â§GLose 2 infamyÂ§W"
         money = 100000
 		scaled_consciousness = {
 			factor = 6
@@ -1759,7 +2128,7 @@ country_event = { #Hungary hears support for Romania
     }
 
     option = {
-        name = "Agree to the treaty. §GLose 4 infamy§W"
+        name = "Agree to the treaty. Â§GLose 4 infamyÂ§W"
         prestige = -5
         badboy = -4
 		scaled_consciousness = {
@@ -1842,7 +2211,7 @@ country_event = { ####Hungary's rebuttal####
     }
 
     option = {
-        name = "The treaty will be enforced! §RGain 3 infamy§W"
+        name = "The treaty will be enforced! Â§RGain 3 infamyÂ§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = HUN
@@ -1971,7 +2340,7 @@ country_event = { ####Hungary hears request for money approved####
     picture = transylvania
 
     option = {
-        name = "Sign the Treaty. §GLose 2 infamy§W"
+        name = "Sign the Treaty. Â§GLose 2 infamyÂ§W"
         money = 100000
 		scaled_consciousness = {
 			factor = 6
@@ -2060,7 +2429,7 @@ country_event = { ####countries hear of Partition####
     picture = transylvania
 
     option = {
-        name = "For the sake of peace, we agree. §GLose 2 infamy§W"
+        name = "For the sake of peace, we agree. Â§GLose 2 infamyÂ§W"
         set_country_flag = yes_transvana
         badboy = -2
         prestige = -5
@@ -2167,7 +2536,7 @@ country_event = { ####result of HUN no/Rom yes
     }
 
     option = {
-        name = "The treaty will be enforced! §RGain 3 infamy§W"
+        name = "The treaty will be enforced! Â§RGain 3 infamyÂ§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = HUN
@@ -2251,7 +2620,7 @@ country_event = { ####result of ROM no/Hun yes
     }
 
     option = {
-        name = "The treaty will be enforced! §RGain 3 infamy§W"
+        name = "The treaty will be enforced! Â§RGain 3 infamyÂ§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = ROM
@@ -2341,7 +2710,7 @@ country_event = { ####result of ROM no/Hun no
     }
 
     option = {
-        name = "They will accept our help! §RGain 3 infamy§W"
+        name = "They will accept our help! Â§RGain 3 infamyÂ§W"
         set_country_flag = transvana_treaty_war
         badboy = 3
         leave_alliance = ROM
@@ -2713,7 +3082,7 @@ country_event = { ####Recognition of pre-Partition PLC borders
 	}
 
     option = {
-        name = "§BGaude Mater Polonia!§!"
+        name = "Â§BGaude Mater Polonia!Â§!"
         prestige = 30
         any_pop = {
             limit = {
