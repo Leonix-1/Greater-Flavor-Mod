@@ -1161,6 +1161,138 @@ country_event = {
     }
 }
 
+country_event = {
+    id = 7273901
+    title = "The Spanish victory"
+    desc = "EVTDESC72739"
+    picture = mexico_soldiers
+    fire_only_once = yes
+    is_triggered_only = yes
+
+	potential
+    option = {
+        name = "We will take back what they forced us to give!"
+		prestige = 25
+        random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123574 } } }
+		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				badboy = 0.90
+			}
+		}
+    }
+    option = {
+        name = "Take back everything they and the French stole. ¡Viva España! §RGain 5 infamy§W"
+		badboy = 5
+		prestige = 40
+		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
+		TEX_132 = { add_core = MEX }
+		USA_81 = { add_core = MEX }
+		USA_78 = { add_core = MEX }
+		USA_91 = { add_core = MEX }
+		114 = { add_core = MEX } #Idaho
+		111 = { add_core = MEX } #Idaho
+		3468 = { add_core = MEX }
+		111 = { add_core = MEX }
+		113 = { add_core = MEX }
+		114 = { add_core = MEX }
+		3467 = { add_core = MEX }
+		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123575 } } }
+		set_country_flag = has_taken_oregon_or_more
+		set_global_flag = mex_took_oregon_maw
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				badboy = 0.89
+			}
+		}
+    }
+
+country_event = {
+    id = 800804
+    title = "The Loss of the Western States" #The Treaty of New York - Maximilian lives
+    desc = "EVTDESC800804"
+    picture = "treaty"
+    major = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT99971OPTA"
+        prestige = -30
+        any_pop = {
+            limit = {
+                culture = french_canadian
+            }
+            move_pop = 249
+        }
+        add_accepted_culture = anglo_canadian
+        CAN_50 = { is_slave = no }
+		any_owned = {
+			limit = {
+				OR = {
+					region = MEX_85
+					region = MEX_85_2
+					region = MEX_2138
+					region = MEX_2142
+					province_id = 2148
+					province_id = 2662
+					province_id = 102
+					province_id = 4064
+					province_id = 4052
+					province_id = 85
+					province_id = 101
+					province_id = 3460
+				}
+			}
+			add_core = CAL
+			add_core = MEX
+			add_core = MEE
+			secede_province = MEE
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					province_id = 107
+					province_id = 129
+					province_id = 109
+					province_id = 103
+					province_id = 105
+					province_id = 3588
+					region = MEX_2149
+					region = TEX_132
+				}
+			}
+			add_core = TEX
+			add_core = MEX
+			add_core = MEE
+			secede_province = MEE
+		}
+		any_owned = {
+			limit = {
+				OR = {
+					region = MEX_97
+					province_id = 108
+				}
+			}
+			add_core = DES
+			add_core = MEX
+			add_core = MEE
+			secede_province = MEE
+		}
+        any_country = {
+			limit = {
+				vassal_of = THIS
+				OR = { tag = CAL tag = DES tag = TEX }
+			}
+			annex_to = MEE
+		}
+        set_country_flag = loss_of_pacific_states
+    }
+}
 
 country_event = {
     id = 72881
