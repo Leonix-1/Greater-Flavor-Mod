@@ -363,7 +363,7 @@
     farmers = {
         culture = kurdish
         religion = yazidi
-        size = 1175
+        size = 175
     }
 	
     aristocrats = {
@@ -393,7 +393,7 @@
     farmers = {
         culture = kurdish
         religion = sunni
-        size = 2400
+        size = 3400
     }
 
     aristocrats = {
@@ -957,7 +957,7 @@
         size = 300
     }
 }
-3987 = {
+4190 = {
     aristocrats = {
         culture = mashriqi
         religion = sunni
@@ -1512,7 +1512,7 @@
     farmers = {
         culture = kurdish
         religion = sunni
-        size = 1570
+        size = 1870
     }
 
     farmers = {
@@ -1602,6 +1602,6 @@
     farmers = {
         culture = kurdish
         religion = yazidi
-        size = 575
+        size = 175
     }
 }
