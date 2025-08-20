@@ -1,8 +1,14 @@
 BUK = {
     value = 50
 }
+PLS = {
+    value = 200
+}
 OMA = {
     truce_until = 1845.1.1
+}
+BNB = {
+    truce_until = 1833.6.1
 }
 
 leader = {
