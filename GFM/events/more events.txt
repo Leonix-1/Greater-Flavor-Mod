@@ -1184,8 +1184,8 @@ country_event = {
 		}
     }
     option = {
-        name = "Take back everything they and the French stole. ¡Viva España! §RGain 5 infamy§W"
-		badboy = 5
+        name = "Take back everything they and the French stole! ¡Viva España! §RGain 15 infamy§W"
+		badboy = 15
 		prestige = 40
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
 		TEX_132 = { add_core = MEX }
