@@ -1597,13 +1597,13 @@ country_event = {
 					province_control_days = 30
 				}
 				OR = {
-					unemployment_by_type = {
-						type = farmers
-						value = 0.4
+					any_pop = {
+						pop_type = farmers
+						unemployment = 0.4
 					}
-					unemployment_by_type = {
-						type = labourers
-						value = 0.4
+					any_pop = {
+						pop_type = labourers
+						unemployment = 0.4
 					}
 				}
 			}
@@ -1617,13 +1617,13 @@ country_event = {
 					province_control_days = 30
 				}
 				NOT = {
-					unemployment_by_type = {
-						type = farmers
-						value = 0.4
+					any_pop = {
+						pop_type = farmers
+						unemployment = 0.4
 					}
-					unemployment_by_type = {
-						type = labourers
-						value = 0.4
+					any_pop = {
+						pop_type = labourers
+						unemployment = 0.4
 					}
 				}
 			}
@@ -19469,6 +19469,19 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
+					11 = {
+						trade_goods = iron
+						NOT = { has_province_modifier = low_density_mine }
+					}
+				}
+			}
+			owner = {
+				11 = { add_province_modifier = { name = low_density_mine duration = -1 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
 					OR = {
 						1071 = {
 							trade_goods = pearls
@@ -20783,7 +20796,7 @@ country_event = {
 						}
 						AND = {
 							owns = 4115
-							3987 = { empty = yes }
+							4190 = { empty = yes }
 							year = 1878
 							#month = 1
 						}
@@ -20918,7 +20931,7 @@ country_event = {
 							#month = 6
 						}
 						AND = {
-							owns = 3987
+							owns = 4190
 							2419 = { empty = yes }
 							year = 1877
 							#month = 1
@@ -20930,7 +20943,7 @@ country_event = {
 							#month = 7
 						}
 						AND = {
-							owns = 3989
+							owns = 4192
 							4110 = { empty = yes }
 							year = 1875
 							#month = 3
@@ -21044,7 +21057,7 @@ country_event = {
 							#month = 1
 						}
 						AND = {
-							owns = 3989
+							owns = 4192
 							2417 = { empty = yes }
 							year = 1905
 							#month = 1
@@ -21156,7 +21169,7 @@ country_event = {
 						AND = {
 							owns = 2309
 							2375 = { empty = yes }
-							year = 1858
+							year = 1868
 							#month = 8
 						}
 						AND = {

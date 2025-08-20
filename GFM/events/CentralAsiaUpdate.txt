@@ -1,4 +1,4 @@
-### AT 52066
+### AT 52069
 ### PROVINCE CLEANUP
 
 country_event = {
@@ -84,7 +84,7 @@ country_event = {
 			owns = 1212
 			}
 		NOT = {
-			owns = 4056
+			owns = 4100
 			}
 		NOT = {
 			owns = 1214
@@ -95,12 +95,15 @@ country_event = {
 		NOT = {
 			owns = 3529
 			}
+		NOT = {
+			owns = 4194
+			}
 	}
 
 	option = {
 		name = "An unfortunate turn of events..."
 		prestige = -2
-		4056 = { owner = { country_event = 52045 } }
+		4100 = { owner = { country_event = 52045 } }
 	}
 	
 	mean_time_to_happen = { months = 1 }
@@ -354,7 +357,7 @@ country_event = {
 		define_general = {
 			name = "Esengeldy Qasymuly"
 			background = attack_1.1
-			personality = defence_0.1
+			personality = no_personality
 		}
 		1195 = {
 			sub_unit = { type = cavalry value = current }
@@ -913,21 +916,12 @@ country_event = {
 
 	trigger = {
 		tag = KAZ
-		is_vassal = no
+		year = 1845
 		has_country_flag = kenesary_rebellion
-		OR = {
-			AND = {
-				year = 1845
-				NOT = { year = 1860 }
-				war_with = RUS
-				exists = KYR
-				}
-			AND = {
-				year = 1848
-				ai = yes
-				war = no
-				}
-		}
+		NOT = { year = 1860 }
+		war_with = RUS
+		exists = KYR
+		is_vassal = no
 	}
 
     option = {
@@ -938,7 +932,7 @@ country_event = {
 		clr_country_flag = kenesary_rebellion
 		remove_country_modifier = kenesary_khan
 		release_vassal = KSJ
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 0 }
     }
 	
 	option = {
@@ -958,6 +952,32 @@ country_event = {
             year = 1847
         }
     }
+}
+
+country_event = {
+	id = 52069
+	title = "If I ever find Kazakhstan lying around again I swear to fucking God I will stop being so polite"
+	desc = "Get the fuck out of my sight before I demolish you"
+	picture = "kenesary_kasimov"
+	fire_only_once = yes
+
+	trigger = {
+		tag = KAZ
+		year = 1848
+		KAZ = { ai = yes }
+		RUS = { OR = { owns = 2612 owns = 1183 owns = 2606 } }
+	}
+	
+	option = {
+        name = "..."
+		prestige = -15
+		clr_country_flag = kenesary_rebellion
+		remove_country_modifier = kenesary_khan
+		release_vassal = KSJ
+		RUS = { country_event = 52001 }
+    }
+	
+	mean_time_to_happen = { days = 1 }
 }
 
 country_event = {
@@ -1990,7 +2010,7 @@ country_event = {
 }
 
 country_event = {
-    id = 52040
+    id = 6426454
     title = "The Zhankozha Nurmukhamedov Rebellion"
     desc = "ZHANKOZHA"
     picture = "zhankozha"
@@ -2415,6 +2435,17 @@ country_event = {
 		prestige = 3
 		badboy = 2
 		KHI = { country_event = 52007 }
+		3498 = { any_pop = { limit = { has_pop_culture = turkmen } reduce_pop = 0.85 } }
+		random_owned = { limit = { owner = { CLN = { has_country_flag = global_mc_setup_complete } } }
+			owner = {
+				1147 = { any_pop = { limit = { has_pop_culture = khorasani } reduce_pop = 0.60 } }
+			}
+		}
+		random_owned = { limit = { owner = { CLN = { NOT = { has_country_flag = global_mc_setup_complete } } } }
+			owner = {
+				1147 = { any_pop = { limit = { has_pop_culture = turkmen } reduce_pop = 0.60 } }
+			}
+		}
 		686 = { add_core = PER }
 		1147 = { add_core = PER }
 		1150 = { add_core = PER }

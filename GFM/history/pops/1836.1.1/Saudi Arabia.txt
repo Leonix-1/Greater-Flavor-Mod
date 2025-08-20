@@ -99,8 +99,8 @@
         religion = sunni
         size = 2500
     }
-	
-	soldiers = {
+
+    soldiers = {
         culture = mashriqi
         religion = sunni
         size = 100

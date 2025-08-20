@@ -214,12 +214,12 @@ mantetsu_integration = {
 }
 
 mantetsu_settling = {
-	immigrant_attract = 0.75
+	immigrant_attract = 2
 	icon = 19
 }
 
 sentetsu = {
-	local_RGO_output = 0.10
+	local_RGO_output = 0.1
 	icon = 13
 }
 
@@ -2492,6 +2492,13 @@ rally_tribesmen2 = {
     icon = 17
 }
 rally_tribesmen3 = {
+    mobilisation_size = 0.5
+    mobilisation_economy_impact = -0.8
+    core_pop_militancy_modifier = -0.12
+    war_exhaustion = -0.03
+    icon = 17
+}
+rally_tribesmen4 = {
     mobilisation_size = 0.5
     mobilisation_economy_impact = -0.8
     core_pop_militancy_modifier = -0.12
