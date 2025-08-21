@@ -792,6 +792,28 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = 684283
+    title = "The final reconquest"
+    desc = "EVTDESC72739"
+    picture = mexico_soldiers
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "We will respect the Adams-Onis Treaty."
+        random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123574 } } }
+		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				badboy = 0.90
+			}
+		}
+    }
+
 country_event = {
     id = 727390
     title = "The Spanish Reconquista"
