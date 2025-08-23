@@ -804,7 +804,7 @@ country_event = {
     option = {
         name = "We will respect the Adams-Onis Treaty."
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123574 } } }
-		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
+		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes vassal_of = USA} } } owner = { inherit = CAL } }
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -830,11 +830,12 @@ country_event = {
         ai_chance = {
             factor = 100
         }
-	war = {
-		target = FROM
-		attacker_wargoal = { scripted_war_huge }
-		defender_wargoal = { scripted_war_huge }
-    }
+		war = {
+			target = THIS
+			attacker_wargoal = { scripted_war_huge }
+			defender_wargoal = { scripted_war_huge }
+		}
+	}
 
 	option = {
         name = "Give them what they want, respect the current treaty."
