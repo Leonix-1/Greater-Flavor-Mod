@@ -58,6 +58,7 @@ political_decisions = {
 				has_global_flag = reconquista
 				has_country_flag = only_one_reconquista
 				has_country_flag = ere_claim_pressed
+				has_country_flag = hispaniola_reconquista
 			}
         }
 
@@ -69,7 +70,7 @@ political_decisions = {
         }
 
         effect = {
-			set_country_flag = ere_claim_pressed
+			set_country_flag = hispaniola_reconquista
 			random_owned = {
 				limit = { owner = { tag = SPA } }
 				owner = { HAI = { add_core = SPA } }
