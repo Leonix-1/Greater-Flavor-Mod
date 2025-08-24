@@ -1009,7 +1009,7 @@ country_event = {
 	trigger = {
 		tag = SPC
 		has_country_flag = bourbon_exile
-		any_owned = { is_core = FRA }
+		any_owned_province = { is_core = FRA NOT = { is_core = THIS } }
 	}
 
 	mean_time_to_happen = { days = 1 }
@@ -1018,19 +1018,14 @@ country_event = {
 		name = "EVTOPTA00208"
 		prestige = 20
 		any_owned = { 
-				limit = { 
-						is_core = FRA 
-			} 
-		}
-		secede_province = BOR
-		FRA = { 
-				any_owned = { 
-				 			limit = { 
-									is_core = FRA 
+			limit = { 
+				is_core = FRA 
+				NOT = { is_core = THIS }
 			}
-		}  
-	add_core = BOR
-	country_event = 80432212
+			secede_province = BOR
+		FRA = { all_core = { add_core = BOR } }  
+		add_core = BOR
+		country_event = 80432212
 	}
 		BOR = {
 				create_alliance = SPC
@@ -1041,6 +1036,49 @@ country_event = {
 		prestige = -35
 	}
 }
+# FRENCH WAR OF SUCCESSION TRIGGER #
+country_event = {
+	id = 80432212
+	title = "EVTNAME00208"
+	desc = "EVTDESC00208"
+	picture = "cuba_economy"
+	fire_only_once = yes
+
+	option = {
+		name = "EVTOPTA00208"
+		war = {
+			target = BOR
+			attacker_wargoal = { civil_war }
+			defender_wargoal = { civil_war }
+		}
+		set_global_flag = french_succession_war
+	}
+}
+# FRENCH VICTORY IN SUCCESSION WAR #
+country_event = {
+	id = 80432214
+	title = ""
+	desc = ""
+	picture = "maxii"
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		BOR = { exists = no }
+		war = no
+		has_global_flag = french_succession_war
+	}
+
+	option = {
+		name = "EVTOPTA0028"
+		presige = 45
+		all_core = {
+			remove_core = BOR
+		}
+		SPC = { country_event = 80432215 }
+	}
+}
+
 # Carlist Loss #
 country_event = {
 	id = 80432215
@@ -1053,6 +1091,75 @@ country_event = {
 		prestige = -50
 	}
 }
+# Borbon Succession War Events At Expense Of French #
+country_event = {
+	id = 80432216
+	title = ""
+	desc = ""
+	picture = "maxii"
+
+	is_triggered_only = yes 
+
+
+	option = {
+		name = ""
+		add_country_modifier = { name = anti_bourbon_sentiment duration = 7300 }
+		government = absolute_monarchy
+        ruling_party_ideology = reactionary
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+	}
+}
+
+country_event = {
+	id = 80432217
+	title =
+	desc = 
+	picture = "maxii"
+	
+	is_triggered_only = yes
+	option = {
+		prestige = -75
+		add_country_modifier = { name = anti_bourbon_sentiment duration = 12775 }
+		government = absolute_monarchy
+        ruling_party_ideology = reactionary
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+		any_owned = { limit = { NOT = { is_core = BOR } } secede_province = SPC }
+	}
+}
+country_event = {
+	id = 80432218
+	title = "EVTNAME00203"
+	desc = "EVTDESC00203"
+	picture = "maxii"
+	is_triggered_only = yes
+	
+		option = {
+		name = "EVTOPTB00208"
+		prestige = -250
+		add_country_modifier = { name = anti_bourbon_sentiment duration = -1 }
+		government = absolute_monarchy
+        ruling_party_ideology = reactionary
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = underground_parties
+		any_owned = { limit = { NOT = { is_core = BOR } } secede_province = SPC }
+		FROM = { create_vassal = THIS }
+	}
+}
+
 # Carlist Victory #
 country_event = { 
 	id = 80432210
@@ -1060,19 +1167,20 @@ country_event = {
 	desc = "EVTDESC00208"
 	fire_only_once = yes
 
-		option = {
+	option = {
 		name = "EVTOPTB00208"
 		prestige = 50
 		badboy = -7
 		BOR = {
 			relation = {
 				who = THIS
-				value = 200
+			value = 200
 			}
-		country_event = 80432216
+			country_event = 80432216
 		}
 	}
-		option = {
+	
+	option = {
 		name = "EVTOPTB00208"
 		prestige = 50
 		badboy = 10
@@ -1081,10 +1189,11 @@ country_event = {
 				who = THIS
 				value = 50
 			}
-		country_event = 80432217
+			country_event = 80432217
 		}
 	}
-		option = {
+	
+	option = {
 		name = "EVTOPTB00208"
 		prestige = 150
 		badboy = 24.99
@@ -1093,7 +1202,7 @@ country_event = {
 				who = THIS
 				value = -150
 			}
-		country_event = 80432218
+			country_event = 80432218
 		}
 	}
 }
