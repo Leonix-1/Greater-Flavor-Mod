@@ -187,7 +187,11 @@ political_decisions = {
         }
     }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 }
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
