@@ -806,6 +806,7 @@ country_event = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         name = "We will respect the Adams-Onis Treaty."
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123574 } } }
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes vassal_of = USA } } } owner = { inherit = CAL } }
@@ -825,6 +826,8 @@ country_event = {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         name = "We will reinforce Adams-Onís"
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 727390 } } }
     }
@@ -835,6 +838,9 @@ country_event = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -876,6 +882,9 @@ country_event = {
 	}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -959,9 +968,12 @@ country_event = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123574 } } }
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes vassal_of = USA } } } owner = { inherit = CAL } }
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -985,6 +997,7 @@ country_event = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes vassal_of = USA } } } owner = { inherit = CAL } }
 		TEX_132 = { add_core = MEX add_core = MEE }
 		USA_81 = { add_core = MEX add_core = MEE }
@@ -999,6 +1012,8 @@ country_event = {
 		3467 = { add_core = MEX add_core = MEE }
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123575 } } }
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -1019,6 +1034,9 @@ country_event = {
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 1235750 } } }
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1033,6 +1051,7 @@ country_event = {
 				badboy = 0.89
 			}
 		}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1081,11 +1100,15 @@ country_event = {
 =======
 		clr_global_flag = adam_onís_war
 >>>>>>> Stashed changes
+=======
+		clr_global_flag = adam_onís_war
+>>>>>>> Stashed changes
     }
     option = {
         name = "All lands West of the Mississippi and Florida are Mexican. Â§RGain 20 infamyÂ§W"
 		badboy = 20
 		prestige = 25
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1119,6 +1142,8 @@ country_event = {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
 		141 = { add_core = UTI } 
 		194 = { add_core = UTI } 
@@ -1148,6 +1173,9 @@ country_event = {
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 1235770 } } }
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1253,6 +1281,7 @@ country_event = {
         any_owned = {
 			limit = {
 				OR = {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -1726,6 +1755,9 @@ country_event = {
 					region = USA_200
 					province_id = 111
 					province_id = 114
+=======
+					is_core = UTI
+>>>>>>> Stashed changes
 =======
 					is_core = UTI
 >>>>>>> Stashed changes
