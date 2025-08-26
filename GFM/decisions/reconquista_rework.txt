@@ -121,9 +121,63 @@ political_decisions = {
         effect = {
             badboy = 15
             set_country_flag = mexico_reconquest
+<<<<<<< Updated upstream
 			country_event = 684283
 		}
 
+=======
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = USA
+                        tag = CSA
+                        tag = CAL
+                        tag = TEX
+                        tag = DES
+                    }
+                }
+                country_event = 684283
+            }
+			OR = {
+				AND = {
+					tag = SPA
+					has_country_flag = reconquista_win
+						effect = {
+            		MEX_85 = { add_core = SPA } #California
+            		MEX_85_2 = { add_core = SPA } #California
+            		TEX_132 = { add_core = SPA } #Texas
+            		MEX_97 = { add_core = SPA } #Utah
+            		129 = { add_core = SPA } #Oklahoma
+					108 = { add_core = SPA } #Colorado
+					3560 = { add_core = SPA } #Colorado
+					109 = { add_core = SPA } #Colorado
+					4176 = { add_core = SPA } #Colorado
+					4120 = { add_core = SPA } #Colorado
+					103 = { add_core = SPA } #Colorado
+					129 = { add_core = SPA } #Colorado
+					MEX_103 = { add_core = SPA } #New Mexico
+						}
+					}
+				tag = SPC
+				has_country_flag = reconquista_win
+					effect = {
+					MEX_85 = { add_core = MEE } #California
+            		MEX_85_2 = { add_core = MEE } #California
+            		TEX_132 = { add_core = MEE } #Texas
+            		MEX_97 = { add_core = MEE } #Utah
+            		129 = { add_core = MEE } #Oklahoma
+					108 = { add_core = MEE } #Colorado
+					3560 = { add_core = MEE } #Colorado
+					109 = { add_core = MEE } #Colorado
+					4176 = { add_core = MEE } #Colorado
+					4120 = { add_core = MEE } #Colorado
+					103 = { add_core = MEE } #Colorado
+					129 = { add_core = MEE } #Colorado
+					MEX_103 = { add_core = MEE } #New Mexico
+					}
+				}
+        }
+>>>>>>> Stashed changes
         ai_will_do = {
             factor = 1
 			modifier = {
@@ -132,4 +186,8 @@ political_decisions = {
 			}
         }
     }
+<<<<<<< Updated upstream
 }
+=======
+
+>>>>>>> Stashed changes
