@@ -1,4 +1,4 @@
-political_decisions = {
+political_decisions = { 
     colonial_reconquista = {
         picture = spain_reconquest
         potential = {

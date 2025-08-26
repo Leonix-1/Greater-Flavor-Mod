@@ -1,4 +1,4 @@
-country_event = {
+country_event = { 
     id = 72758
     title = "The Sardinian Border Blunder"
     desc = "EVTDESC72758"
