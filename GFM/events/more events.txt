@@ -802,12 +802,6 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         name = "We will respect the Adams-Onis Treaty."
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123574 } } }
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes vassal_of = USA } } } owner = { inherit = CAL } }
@@ -820,17 +814,6 @@ country_event = {
 		}
     }
 
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         name = "We will reinforce Adams-Onís"
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 727390 } } }
     }
@@ -838,20 +821,7 @@ country_event = {
         name = "We will retake everything we've been forced to give"
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 7273900 } } }
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 country_event = {
     id = 727390
     title = "The Spanish Reconquista"
@@ -868,7 +838,6 @@ country_event = {
         ai_chance = {
             factor = 100
         }
-<<<<<<< Updated upstream
 		FROM = { 
 			war = {
 				target = THIS
@@ -878,7 +847,6 @@ country_event = {
 		}
 	}
 
-=======
 	war = {
 		target = FROM
 		attacker_wargoal = { scripted_war_huge }
@@ -886,19 +854,6 @@ country_event = {
     }
 	set_global_flag = adam_onís_war
 	}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 	option = {
         name = "Give them what they want, respect the current treaty."
 		prestige = -25
@@ -974,25 +929,11 @@ country_event = {
     option = {
         name = "We will respect the Adams-Onís Treaty."
 		prestige = 25
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123574 } } }
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes vassal_of = USA } } } owner = { inherit = CAL } }
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
         random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 1235740 } } }
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
->>>>>>> Stashed changes
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -1006,11 +947,6 @@ country_event = {
         name = "Take the Oregon territory. §RGain 5 infamy§W"
 		badboy = 5
 		prestige = 40
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes vassal_of = USA } } } owner = { inherit = CAL } }
 		TEX_132 = { add_core = MEX add_core = MEE }
 		USA_81 = { add_core = MEX add_core = MEE }
@@ -1024,15 +960,6 @@ country_event = {
 		114 = { add_core = MEX add_core = MEE }
 		3467 = { add_core = MEX add_core = MEE }
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123575 } } }
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
 		TEX_132 = { add_core = UTI }
 		USA_200 = { add_core = UTI }
@@ -1047,19 +974,6 @@ country_event = {
 		197 = { add_core = UTI }
 		198 = { add_core = UTI }
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 1235750 } } }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 		set_country_flag = has_taken_oregon_or_more
 		set_global_flag = mex_took_oregon_maw
 		ai_chance = {
@@ -1069,11 +983,6 @@ country_event = {
 				badboy = 0.89
 			}
 		}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     }
     option = {
         name = "All land West of the Mississippi is Mexican. Â§RGain 15 infamyÂ§W"
@@ -1110,31 +1019,12 @@ country_event = {
 				badboy = 0.4
 			}
 		}
-=======
 		clr_global_flag = adam_onís_war
->>>>>>> Stashed changes
-=======
-		clr_global_flag = adam_onís_war
->>>>>>> Stashed changes
-=======
-		clr_global_flag = adam_onís_war
->>>>>>> Stashed changes
-=======
-		clr_global_flag = adam_onís_war
->>>>>>> Stashed changes
-=======
-		clr_global_flag = adam_onís_war
->>>>>>> Stashed changes
     }
     option = {
         name = "All lands West of the Mississippi and Florida are Mexican. Â§RGain 20 infamyÂ§W"
 		badboy = 20
 		prestige = 25
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes vassal_of = USA } } } owner = { inherit = CAL } }
 		USA_81 = { add_core = THIS }
 		USA_78 = { add_core = THIS }
@@ -1160,15 +1050,6 @@ country_event = {
 		194 = { add_core = THIS }
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123577 } } }
 		random_owned = { limit = { owner = { TEX = { exists = yes ai = yes vassal_of = USA } } } owner = { TEX = { country_event = 123577 } } }
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
 		141 = { add_core = UTI } 
 		194 = { add_core = UTI } 
@@ -1196,19 +1077,6 @@ country_event = {
 		USA_158 = { add_core = UTI }
 		USA_200 = { add_core = UTI }
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 1235770 } } }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 		set_country_flag = has_taken_oregon_or_more
 		set_global_flag = mex_took_florida_maw
 		ai_chance = {
@@ -1309,11 +1177,6 @@ country_event = {
         any_owned = {
 			limit = {
 				OR = {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 					is_core = FROM
 					region = CAN_13
 					region = USA_81
@@ -1352,8 +1215,7 @@ country_event = {
 
 
 
-=======
->>>>>>> Stashed changes
+
 country_event = {
     id = 727390
     title = "The Spanish Reconquista"
@@ -1490,7 +1352,6 @@ country_event = {
 				badboy = 0.89
 			}
 		}
-<<<<<<< Updated upstream
     }
     option = {
         name = "All land West of the Mississippi is Mexican. Â§RGain 15 infamyÂ§W"
@@ -1527,16 +1388,13 @@ country_event = {
 				badboy = 0.4
 			}
 		}
-=======
 		clr_global_flag = adam_onís_war
->>>>>>> Stashed changes
     }
     option = {
         name = "All lands West of the Mississippi and Florida are Mexican. Â§RGain 20 infamyÂ§W"
 		badboy = 20
 		prestige = 25
 		random_owned = { limit = { owner = { CAL = { exists = yes ai = yes } } } owner = { inherit = CAL } }
-<<<<<<< Updated upstream
 		USA_81 = { add_core = MEX }
 		USA_78 = { add_core = MEX }
 		USA_91 = { add_core = MEX }
@@ -1561,7 +1419,6 @@ country_event = {
 		194 = { add_core = MEX }
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 123577 } } }
 		random_owned = { limit = { owner = { TEX = { exists = yes } } } owner = { TEX = { country_event = 123577 } } }
-=======
 		141 = { add_core = UTI } 
 		194 = { add_core = UTI } 
 		3468 = { add_core = UTI }
@@ -1588,7 +1445,6 @@ country_event = {
 		USA_158 = { add_core = UTI }
 		USA_200 = { add_core = UTI }
 		random_owned = { limit = { owner = { USA = { exists = yes } } } owner = { USA = { country_event = 1235770 } } }
->>>>>>> Stashed changes
 		set_country_flag = has_taken_oregon_or_more
 		set_global_flag = mex_took_florida_maw
 		ai_chance = {
@@ -1599,21 +1455,11 @@ country_event = {
 				has_country_flag = texas_recaptured
 			}
 		}
-<<<<<<< Updated upstream
     }
 }
-
-country_event = {
-    id = 123574
-=======
-		clr_global_flag = adam_onís_war
-    }
-}
-
 
 country_event = {
     id = 1235740
->>>>>>> Stashed changes
     title = "A Peace with Mexico"
     desc = "After losing the Mexican-American war, the Mexicans have decided to keep the land from the Adams-OnÃ­s Treaty."
     picture = "mexico-us-treaty"
@@ -1621,14 +1467,12 @@ country_event = {
     is_triggered_only = yes
     option = {
         name = "What a humiliation."
-<<<<<<< Updated upstream
         any_owned = { limit = { OR = { region = TEX_132 is_core = SPA } } secede_province = UTI }
 		SPA = { inherit = UTI }
     }
 }
 country_event = {
     id = 123575
-=======
         MEX_85 = { add_core = UTI }
 		MEX_85_2 = { add_core = UTI }
 		MEX_97 = { add_core = UTI }
@@ -1648,7 +1492,6 @@ country_event = {
 }
 country_event = {
     id = 1235750
->>>>>>> Stashed changes
     title = "A Peace with Mexico"
     desc = "After losing the Mexican-American war, we are forced to accept the Mexican demands through the Treaty of San Antonio."
     picture = "mexico-us-treaty"
@@ -1660,7 +1503,6 @@ country_event = {
         any_owned = {
 			limit = {
 				OR = {
-<<<<<<< Updated upstream
 					is_core = MEX
 					region = USA_81
 					region = USA_78
@@ -1671,27 +1513,22 @@ country_event = {
 					province_id = 113
 					province_id = 114
 					province_id = 3467
-=======
 					is_core = UTI
->>>>>>> Stashed changes
 				}
 			}
 			secede_province = UTI
 		}
 		random_owned = { limit = { owner = { UOR = { exists = yes vassal_of = THIS } } } owner = { UOR = { all_core = { add_core = FROM secede_province = THIS secede_province = UTI } } } }
 		FROM = { inherit = UTI }
-<<<<<<< Updated upstream
     }
 }
 country_event = {
     id = 123576
-=======
 		UTI = { all_core = { remove_core = UTI } }
     }
 }
 country_event = {
     id = 1235760
->>>>>>> Stashed changes
     title = "A Peace with Mexico"
     desc = "After losing the Mexican-American war, we are forced to accept the Mexican demands through the Treaty of San Antonio."
     picture = "mexico-us-treaty"
@@ -1702,7 +1539,6 @@ country_event = {
         any_owned = {
 			limit = {
 				OR = {
-<<<<<<< Updated upstream
 					is_core = FROM
 					region = CAN_13
 					region = USA_81
@@ -1726,10 +1562,8 @@ country_event = {
 					province_id = 114
 				}
 				NOT = { province_id = 140 }
-=======
 					is_core = UTI
 				}
->>>>>>> Stashed changes
 			}
 			secede_province = UTI
         }
@@ -1737,18 +1571,15 @@ country_event = {
 		FROM = { inherit = UTI }
 		FROM = { country_event = { id = 4207101 days = 3 } }
 		remove_country_modifier = you_are_going_to_the_usa
-<<<<<<< Updated upstream
     }
 }
 country_event = {
     id = 123577
-=======
 		UTI = { all_core = { remove_core = UTI } }
     }
 }
 country_event = {
     id = 1235770
->>>>>>> Stashed changes
     title = "A Peace with Mexico"
     desc = "After losing the Mexican-American war, we are forced to accept the Mexican demands through the Treaty of San Antonio."
     picture = "mexico-us-treaty"
@@ -1759,7 +1590,6 @@ country_event = {
         any_owned = {
 			limit = {
 				OR = {
-<<<<<<< Updated upstream
 					is_core = FROM
 					region = CAN_13
 					region = USA_81
@@ -1784,24 +1614,7 @@ country_event = {
 					region = USA_200
 					province_id = 111
 					province_id = 114
-=======
 					is_core = UTI
->>>>>>> Stashed changes
-=======
-					is_core = UTI
->>>>>>> Stashed changes
-=======
-					is_core = UTI
->>>>>>> Stashed changes
-=======
-					is_core = UTI
->>>>>>> Stashed changes
-=======
-					is_core = UTI
->>>>>>> Stashed changes
-=======
-					is_core = UTI
->>>>>>> Stashed changes
 				}
 			}
 			secede_province = UTI

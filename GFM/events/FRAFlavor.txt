@@ -1804,7 +1804,6 @@ country_event = {
 	}
 	
 }
-<<<<<<< Updated upstream
 =======
 # FRENCH WAR OF SUCCESSION TRIGGER #
 country_event = {
@@ -1905,4 +1904,4 @@ fire_only_once = yes
 		}
 	FROM = { create_vassal = THIS }
 	}
->>>>>>> Stashed changes
+

@@ -121,11 +121,8 @@ political_decisions = {
         effect = {
             badboy = 15
             set_country_flag = mexico_reconquest
-<<<<<<< Updated upstream
 			country_event = 684283
 		}
-
-=======
             any_country = {
                 limit = {
                     OR = {
@@ -177,7 +174,6 @@ political_decisions = {
 					}
 				}
         }
->>>>>>> Stashed changes
         ai_will_do = {
             factor = 1
 			modifier = {
@@ -186,24 +182,4 @@ political_decisions = {
 			}
         }
     }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-}
-=======
 
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
