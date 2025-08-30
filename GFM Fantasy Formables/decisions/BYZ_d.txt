@@ -731,9 +731,8 @@ political_decisions = {
 				tag = SPC
 			}
             has_global_flag = fantasy_countries_enabled
-			NOT = { has_global_flag = only_one_reconquista }
+			NOT = { has_global_flag = reconquista }
         }
-}
         allow = {
 			OR = {
 				is_greater_power = yes
@@ -757,7 +756,6 @@ political_decisions = {
             set_country_flag = ere_claims_pressed
         }
     }
-}
     form_byzantine_empire_spain = {
 		picture = form_byzantine_empire
         potential = {
