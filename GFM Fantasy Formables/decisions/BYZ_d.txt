@@ -729,6 +729,7 @@ political_decisions = {
             OR = {
 				tag = SPA
 				tag = SPC
+			}
             has_global_flag = fantasy_countries_enabled
 			NOT = { has_global_flag = only_one_reconquista }
         }
@@ -763,6 +764,7 @@ political_decisions = {
             OR = {
 				tag = SPA
 				tag = SPC
+			}
             has_global_flag = fantasy_countries_enabled
 			NOT = { has_global_flag = reconquista }
         }
