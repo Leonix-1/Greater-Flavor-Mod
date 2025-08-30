@@ -745,7 +745,6 @@ political_decisions = {
                 government = absolute_empire
             }
         }
-
         effect = {
             GRE = 
 				relation = {
@@ -786,7 +785,6 @@ political_decisions = {
                 government = constitutional_empire
             }
         }
-
         effect = {
             change_tag = BYZ
 			random_owned = {
