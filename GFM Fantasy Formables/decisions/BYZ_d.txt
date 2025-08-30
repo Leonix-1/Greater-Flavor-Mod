@@ -726,10 +726,7 @@ political_decisions = {
     claim_byzantine_empire_spain = {
 		picture = form_byzantine_empire
         potential = {
-            OR = {
-				tag = SPA
-				tag = SPC
-			}
+			primary_culture = spanish
             has_global_flag = fantasy_countries_enabled
 			NOT = { has_global_flag = reconquista }
         }
@@ -758,10 +755,7 @@ political_decisions = {
     form_byzantine_empire_spain = {
 		picture = form_byzantine_empire
         potential = {
-            OR = {
-				tag = SPA
-				tag = SPC
-			}
+            primary_culture = spanish
             has_global_flag = fantasy_countries_enabled
 			NOT = { has_global_flag = reconquista }
         }
