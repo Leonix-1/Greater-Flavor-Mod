@@ -766,7 +766,6 @@ political_decisions = {
             has_global_flag = fantasy_countries_enabled
 			NOT = { has_global_flag = reconquista }
         }
-}
         allow = {
 			has_country_flag = ere_claims_pressed
 			OR = {
@@ -834,4 +833,3 @@ political_decisions = {
 			BYZ = { country_event = 144321 }
         }
     }
-}
