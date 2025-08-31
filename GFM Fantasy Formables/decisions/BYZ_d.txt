@@ -722,7 +722,7 @@ political_decisions = {
             set_country_flag = reclaim_krimaia
         }
     }
-}
+
     claim_byzantine_empire_spain = {
 		picture = form_byzantine_empire
         potential = {
@@ -745,13 +745,19 @@ political_decisions = {
         effect = {
             GRE = 
 				relation = {
-						who = THIS
-						value = -200
-		}
-		badboy = 5
+					who = THIS
+					value = -200
+			}
+			casus_belli = {
+					target = GRE
+					type = conquest_any
+					months = 120
+			}
+			badboy = 5
             set_country_flag = ere_claims_pressed
         }
     }
+
     form_byzantine_empire_spain = {
 		picture = form_byzantine_empire
         potential = {
@@ -811,17 +817,19 @@ political_decisions = {
 					government = constitutional_empire
 				}
 			}
-            capital = 860
-           GRE = {
+			capital = 860
+			GRE = {
                 all_core = {
                 	add_core = BYZ
-            }
-		}
-		3302 = { add_core = THIS }
-		859 = { add_core = THIS }
+				}
+			}
+			3302 = { add_core = THIS }
+			859 = { add_core = THIS }
             prestige = 40
-		badboy = 12
+			badboy = 12
             set_country_flag = i_am_byz
 			BYZ = { country_event = 144321 }
         }
     }
+
+}
