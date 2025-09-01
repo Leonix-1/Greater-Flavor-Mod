@@ -62,7 +62,7 @@ country_event = {
     fire_only_once = yes
 
     option = {
-        name = "We will not abandon our identity for the sake of supposed 'heritage,' EspaÃ±a is the seat of power and Spanish is our language and people!!"
+        name = "We will not abandon our identity for the sake of supposed 'heritage,' España is the seat of power and Spanish is our language and our people!!"
            BYZ = { { primary_culture = spanish } add_accepted_culture = greek }
         }
     option = {
