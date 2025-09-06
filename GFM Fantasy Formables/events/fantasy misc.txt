@@ -60,14 +60,168 @@ country_event = {
     title = "Eastern Roman Question"
     desc = "We have claimed our throne in the city of world's desire, but a new question lays before us... Shall we embrace our Greek roots or shall we continue as a Spanish monarchy?"
     fire_only_once = yes
+	is_triggered_only = yes
 
     option = {
         name = "We will not abandon our identity for the sake of supposed 'heritage,' España is the seat of power and Spanish is our language and our people!!"
-           BYZ = { { primary_culture = spanish } add_accepted_culture = greek }
+			BYZ = { { primary_culture = spanish } add_accepted_culture = greek }
+			any_pop = {
+                    limit = { culture = greek }
+                    militancy = 10
+                    consciousness = 10
+					}
+			any_pop = {
+                    limit = { culture = spanish }
+                    militancy = -4
+                    consciousness = -4
+				}
+			any_pop = {
+                    limit = { culture = galician }
+                    militancy = -2
+                    consciousness = -2
+				}
+			any_pop = {
+                    limit = { culture = catalan }
+                    militancy = -1
+                    consciousness = -1
+				}
+			clr_country_flag = orthodox_nation
+			set_country_flag = catholic_nation
         }
     option = {
         name = "We claimed the throne and proved true to the world that we are Rome, Hellenos is the seat of power and her people are its masters. Glory to the Empire!"
            BYZ = { { primary_culture = greek } add_accepted_culture = spanish }
+		   			any_pop = {
+                    limit = { culture = greek }
+                    militancy = -6
+                    consciousness = -6
+				any_pop = {
+                    limit = { culture = spanish }
+                    militancy = 3
+                    consciousness = 3
+					any_pop = {
+                    limit = { culture = galician }
+                    militancy = 4
+                    consciousness = 4
+					any_pop = {
+                    limit = { culture = catalan }
+                    militancy = 6
+                    consciousness = 6
+						}
+					}
+				}
+            }
+    }
+
+}
+
+country_event = {
+    id = 144321 
+    title = "A Tale Of Two Churches"
+    desc = "Centuries prior to the ascension of Charlemagne the churches of the east and west were by no means the same entity, his ascension as emperor of the west and divine appointment by the pope being the final spark to the schism. Our position being close to the pope and emperor of the east allows us to finally put forth measures to end the schism for all."
+    fire_only_once = yes
+
+    option = {
+        name = "A consolidation of churches could mean greater unity in the face of our protestant adversaries!"
+			BYZ = { { primary_culture = spanish } add_accepted_culture = greek }
+			any_pop = {
+                    limit = { culture = greek }
+                    militancy = 10
+                    consciousness = 10
+				any_pop = {
+                    limit = { culture = spanish }
+                    militancy = -4
+                    consciousness = -4
+					any_pop = {
+                    limit = { culture = galician }
+                    militancy = -2
+                    consciousness = -2
+					any_pop = {
+                    limit = { culture = catalan }
+                    militancy = -1
+                    consciousness = -1
+						}
+					}
+				}
+            }
+			clr_country_flag = orthodox_nation
+			set_country_flag = catholic_nation
+			RUS = { 
+				relation = {
+					who = THIS
+					value = -200
+				}
+			}
+			TUR = { 
+				relation = {
+					who = THIS
+					value = -400
+				}
+				influence = {
+					who = THIS
+					value = -600
+				}
+			}
+			PAP = {
+				relation = {
+					who = THIS
+					value = 200
+				}
+				influence = {
+					who = THIS
+					value = 300
+				}				
+			}
+        }
+    option = {
+        name = "We are the emperor of Rome and claiment of the pentarchy, the disloyal pope and his heretical preaching shall end!"
+           BYZ = { { primary_culture = greek } add_accepted_culture = spanish }
+		   			any_pop = {
+                    limit = { culture = greek }
+                    militancy = -6
+                    consciousness = -6
+					}
+				any_pop = {
+                    limit = { culture = spanish }
+                    militancy = 3
+                    consciousness = 3
+					}
+					any_pop = {
+                    limit = { culture = galician }
+                    militancy = 4
+                    consciousness = 4
+					}
+					any_pop = {
+                    limit = { culture = catalan }
+                    militancy = 6
+                    consciousness = 6
+						}
+			RUS = { 
+				relation = {
+					who = THIS
+					value = 150
+				}
+			}
+			TUR = { 
+				relation = {
+					who = THIS
+					value = -400
+				}
+				influence = {
+					who = THIS
+					value = -600
+				}
+			}
+			PAP = {
+				relation = {
+					who = THIS
+					value = -200
+				}
+				influence = {
+					who = THIS
+					value = -600
+				}				
+			}
     }
 
 }
