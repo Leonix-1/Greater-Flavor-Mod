@@ -1097,7 +1097,6 @@ country_event = {
 	title = ""
 	desc = ""
 	picture = "maxii"
-
 	is_triggered_only = yes 
 
 
@@ -1120,9 +1119,9 @@ country_event = {
 	title =
 	desc = 
 	picture = "maxii"
-	
 	is_triggered_only = yes
-	option = {
+	
+		option = {
 		prestige = -75
 		add_country_modifier = { name = anti_bourbon_sentiment duration = 12775 }
 		government = absolute_monarchy
@@ -1163,12 +1162,12 @@ country_event = {
 # Carlist Victory #
 country_event = { 
 	id = 80432210
-	title = "EVTNAME00208"
-	desc = "EVTDESC00208"
+	title = "EVTNAME80432210"
+	desc = "EVTDESC80432210"
 	fire_only_once = yes
 
-	option = {
-		name = "EVTOPTB00208"
+		option = {
+		name = "EVTOPTB80432210a"
 		prestige = 50
 		badboy = -7
 		BOR = {
@@ -1180,8 +1179,8 @@ country_event = {
 		}
 	}
 	
-	option = {
-		name = "EVTOPTB00208"
+		option = {
+		name = "EVTOPTB80432210b"
 		prestige = 50
 		badboy = 10
 		BOR = {
@@ -1193,8 +1192,8 @@ country_event = {
 		}
 	}
 	
-	option = {
-		name = "EVTOPTB00208"
+		option = {
+		name = "EVTOPTB80432210c"
 		prestige = 150
 		badboy = 24.99
 		BOR = {
