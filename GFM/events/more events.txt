@@ -796,7 +796,7 @@ country_event = {
 country_event = {
     id = 684283
     title = "The final reconquest"
-    desc = "EVTDESC72739"
+    desc = "EVTDESC684283"
     picture = mexico_soldiers
     fire_only_once = yes
     is_triggered_only = yes
@@ -825,7 +825,7 @@ country_event = {
 country_event = {
     id = 727390
     title = "The Spanish Reconquista"
-    desc = "EVTDESC72739"
+    desc = "EVTDESC727390"
     picture = mexico_soldiers
     is_triggered_only = yes
 
@@ -894,7 +894,7 @@ country_event = {
 country_event = {
     id = 7273900
     title = "The Spanish Demand"
-    desc = "EVTDESC72739"
+    desc = "EVTDESC7273900"
     picture = mexico_soldiers
     is_triggered_only = yes
 
@@ -917,7 +917,7 @@ country_event = {
 country_event = {
     id = 727391
     title = "The Spanish victory"
-    desc = "EVTDESC72739"
+    desc = "EVTDESC727391"
     picture = mexico_soldiers
     fire_only_once = yes
 
@@ -1219,7 +1219,7 @@ country_event = {
 country_event = {
     id = 727390
     title = "The Spanish Reconquista"
-    desc = "EVTDESC72739"
+    desc = "EVTDESC727390"
     picture = mexico_soldiers
     is_triggered_only = yes
 
@@ -1279,7 +1279,7 @@ country_event = {
 country_event = {
     id = 7273900
     title = "The Spanish Demand"
-    desc = "EVTDESC72739"
+    desc = "EVTDESC7273900"
     picture = mexico_soldiers
     is_triggered_only = yes
 
@@ -1302,7 +1302,7 @@ country_event = {
 country_event = {
     id = 727391
     title = "The Spanish victory"
-    desc = "EVTDESC72739"
+    desc = "EVTDESC727391"
     picture = mexico_soldiers
     fire_only_once = yes
 
@@ -1576,7 +1576,6 @@ country_event = {
 country_event = {
     id = 123577
 		UTI = { all_core = { remove_core = UTI } }
-    }
 }
 country_event = {
     id = 1235770
@@ -1631,7 +1630,7 @@ country_event = {
 country_event = {
     id = 7273901
     title = "The Spanish victory"
-    desc = "EVTDESC72739"
+    desc = "EVTDESC7273901"
     picture = mexico_soldiers
     fire_only_once = yes
  	trigger = {

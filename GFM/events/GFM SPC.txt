@@ -1001,8 +1001,8 @@ country_event = {
 # Carlist appointment of Bourbons in France by owning French cores #
 country_event = {
 	id = 80432209
-	title = "EVTNAME00208"
-	desc = "EVTDESC00208"
+	title = "EVTNAME80432209"
+	desc = "EVTDESC80432209"
 	picture = "cuba_economy"
 	fire_only_once = yes
 
@@ -1015,16 +1015,19 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = "EVTOPTA00208"
+		name = "EVTOPTA80432209"
 		prestige = 20
 		any_owned = { 
 			limit = { 
 				is_core = FRA 
 				NOT = { is_core = THIS }
 			}
+		}
 			secede_province = BOR
-		FRA = { all_core = { add_core = BOR } }  
-		add_core = BOR
+		FRA = { 
+			all_core = { 
+				add_core = BOR 
+			}  
 		country_event = 80432212
 	}
 		BOR = {
@@ -1032,20 +1035,20 @@ country_event = {
 	}
 }
 	option = {
-		name = "EVTOPTB00208"
+		name = "EVTOPTB80432209"
 		prestige = -35
 	}
 }
 # FRENCH WAR OF SUCCESSION TRIGGER #
 country_event = {
 	id = 80432212
-	title = "EVTNAME00208"
-	desc = "EVTDESC00208"
+	title = "EVTNAME80432212"
+	desc = "EVTDESC80432212"
 	picture = "cuba_economy"
 	fire_only_once = yes
 
 	option = {
-		name = "EVTOPTA00208"
+		name = "EVTOPTA80432212"
 		war = {
 			target = BOR
 			attacker_wargoal = { civil_war }
@@ -1057,8 +1060,8 @@ country_event = {
 # FRENCH VICTORY IN SUCCESSION WAR #
 country_event = {
 	id = 80432214
-	title = ""
-	desc = ""
+	title = "EVTNAME80432214"
+	desc = "EVTDESC80432214"
 	picture = "maxii"
 	fire_only_once = yes
 
@@ -1070,7 +1073,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA0028"
+		name = "EVTOPTA80432214"
 		presige = 45
 		all_core = {
 			remove_core = BOR
@@ -1082,26 +1085,29 @@ country_event = {
 # Carlist Loss #
 country_event = {
 	id = 80432215
-	title = "EVTNAME00208"
-	desc = "EVTDESC00208"
+	title = "EVTNAME80432215"
+	desc = "EVTDESC80432215"
 	fire_only_once = yes
+	is_triggered_only = yes
 			
 		option = {
-		name = "EVTOPTB00208"
+		name = "EVTOPTA80432215"
 		prestige = -50
+		clr_country_flag = bourbon_exile
+		clr_global_flag = french_succession_war
 	}
 }
 # Borbon Succession War Events At Expense Of French #
 country_event = {
 	id = 80432216
-	title = ""
-	desc = ""
+	title = "EVTNAME80432216"
+	desc = "EVTDESC80432216"
 	picture = "maxii"
 	is_triggered_only = yes 
 
 
 	option = {
-		name = ""
+		name = "EVTOPTA80432216"
 		add_country_modifier = { name = anti_bourbon_sentiment duration = 7300 }
 		government = absolute_monarchy
         ruling_party_ideology = reactionary
@@ -1116,12 +1122,13 @@ country_event = {
 
 country_event = {
 	id = 80432217
-	title =
-	desc = 
+	title = "EVTNAME80432217
+	desc = "EVTDESC80432217
 	picture = "maxii"
 	is_triggered_only = yes
 	
 		option = {
+		name = "EVTOPTA80432217"
 		prestige = -75
 		add_country_modifier = { name = anti_bourbon_sentiment duration = 12775 }
 		government = absolute_monarchy
@@ -1137,13 +1144,13 @@ country_event = {
 }
 country_event = {
 	id = 80432218
-	title = "EVTNAME00203"
-	desc = "EVTDESC00203"
+	title = "EVTNAME80432218"
+	desc = "EVTDESC80432218"
 	picture = "maxii"
 	is_triggered_only = yes
 	
 		option = {
-		name = "EVTOPTB00208"
+		name = "EVTOPTA80432218"
 		prestige = -250
 		add_country_modifier = { name = anti_bourbon_sentiment duration = -1 }
 		government = absolute_monarchy
@@ -1167,7 +1174,7 @@ country_event = {
 	fire_only_once = yes
 
 		option = {
-		name = "EVTOPTB80432210a"
+		name = "EVTOPTA80432210"
 		prestige = 50
 		badboy = -7
 		BOR = {
@@ -1180,7 +1187,7 @@ country_event = {
 	}
 	
 		option = {
-		name = "EVTOPTB80432210b"
+		name = "EVTOPTB80432210"
 		prestige = 50
 		badboy = 10
 		BOR = {
@@ -1193,7 +1200,7 @@ country_event = {
 	}
 	
 		option = {
-		name = "EVTOPTB80432210c"
+		name = "EVTOPTC80432210"
 		prestige = 150
 		badboy = 24.99
 		BOR = {
