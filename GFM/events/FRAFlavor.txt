@@ -44,6 +44,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA00013"
 		prestige = 15
+		set_country_flag = bourbon_exile
 		FRA = { country_event = 80432014 }
 	}
 
@@ -65,15 +66,70 @@ country_event = {
 		name = "EVTOPTA00014"
 		prestige = -20
 		any_pop = { consciousness = 1 }
+		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "EVTOPTB00014"
-		casus_belli = {
+		badboy = 5
+		set_global_flag = fight_for_the_bourbons
+		war = { #Change to a scripted wargoal on the Americas
 			target = SPC
-			type = humiliate
-			months = 12
+			attacker_goal = { casus_belli = cut_down_to_size_no_infamy }
+			defender_goal = { casus_belli = humiliate_no_infamy }
 		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = 800879
+	title = "The Bourbons are expatriated!"
+	desc = "EVTDESC800879"
+	picture = "carlos_v"
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 1 }
+	
+	trigger = {
+		tag = SPC
+		war = no
+		has_country_flag = bourbon_exile
+		has_global_flag = fight_for_the_bourbons
+		is_disarmed = yes
+	}
+	
+	option = {
+		name = "We can only wish them farewell..."
+		clr_global_flag = fight_for_the_bourbons
+		clr_country_flag = bourbon_exile
+		prestige = -20
+	}
+}
+
+country_event = {
+	id = 800880
+	title = "The French back down!"
+	desc = "EVTDESC800880"
+	picture = "carlos_v"
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = { months = 1 }
+	
+	trigger = {
+		tag = SPC
+		war = no
+		has_country_flag = bourbon_exile
+		has_global_flag = fight_for_the_bourbons
+		is_disarmed = no
+	}
+	
+	option = {
+		name = "The French can't boss us around!"
+		clr_global_flag = fight_for_the_bourbons
+		prestige = 10
 	}
 }
 
