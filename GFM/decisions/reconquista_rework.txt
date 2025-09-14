@@ -74,21 +74,13 @@ political_decisions = {
 
         effect = {
 			set_country_flag = hispaniola_reconquista
-			random_owned = {
-				limit = { owner = { tag = SPA } }
-				owner = { HAI = { add_core = SPA } }
+			DOM = { all_core = { add_core = THIS } }
+			THIS = { 
+				casus_belli = { 
+					target = HAI
+					type = conquest_any
+					months = 60
 			}
-			random_owned = { limit = { owner = { tag = SPA owns = 2213 owns = 2214 } } owner = { badboy = 5 } }
-			random_owned = { limit = { owner = { tag = SPA NOT = { owns = 2213 owns = 2214 } } } owner = { badboy = 10 } }
-			random_owned = {
-				limit = { owner = { primary_culture = spanish } }
-				owner = { 
-					casus_belli = { target = DOM type = conquest_any months = 36 }
-					casus_belli = { target = HAI type = conquest_any months = 36 }
-				}
-			}
-			random_owned = { limit = { owner = { tag = SPC owns = 2213 owns = 2214 } } owner = { badboy = 5 } }
-			random_owned = { limit = { owner = { tag = SPC NOT = { owns = 2213 owns = 2214 } } } owner = { badboy = 10 } }
 		}
 	}
 
