@@ -565,8 +565,7 @@ political_decisions = {
 					has_country_flag = carlist_ibr
 				}
 			}
-			has_country_flag = bourbon_exile
-			NOT = { has_country_flag = bourbon_exile_restoration }
+			NOT = { has_country_flag = bourbon_exile has_country_flag = bourbon_exile_restoration }
 		}
 		
 		allow = {

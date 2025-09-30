@@ -1034,7 +1034,7 @@ country_event = {
 			
 		option = {
 		name = "Surely the death of our rule can't be nigh... right"
-		clr_country_flag = bourbon_exile
+		set_country_flag = bourbon_exile
 		prestige = -50
 	}
 }
